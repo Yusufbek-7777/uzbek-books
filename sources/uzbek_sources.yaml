@@ -1,0 +1,692 @@
+# Ўзбек тилидаги матн манбалари каталоги.
+#
+# origin:
+#   registry — «23_til_adabiyotlar_va_matnlar_reestri.txt» реестридан (1-қисм, ўзбек тили).
+#   added    — реестрда йўқ, қўшимча топилган манба.
+# access:
+#   bulk    — scripts/fetch_sources.py бутун манбани (ёки унинг ўзбекча қисмини) юклай олади.
+#   direct  — фақат шу ерда кўрсатилган алоҳида файллар (PDF ва ҳ.к.) юкланади.
+#   browse  — портал ёки кутубхона; автоматик юклаб олинмайди (муаллифлик ҳуқуқи,
+#             сайт шартлари ёки очиқ API йўқлиги сабабли). Қўлда ёки рухсат билан йиғилади.
+# fetch:
+#   hf   — Hugging Face датасет (patterns: фақат ўзбекча файлларни танлайди).
+#   git  — GitHub репозиторийси (--depth 1).
+#   url  — тўғридан-тўғри файл ҳаволаси.
+#   ia   — Internet Archive элементи (PDF/TXT/DJVU файллари).
+# note: «unverified» — ҳавола ёки файл тузилмаси ҳали текширилмаган.
+
+sources:
+
+  # ---------------------------------------------------------------- 1.1 Миллий корпуслар
+  - id: UZ-TXT-01
+    name: Ўзбек тилининг электрон миллий корпуси (uzbekcorpus.uz)
+    group: corpus
+    format: HTML / конкорданс
+    access: browse
+    origin: registry
+    urls:
+      - https://uzbekcorpus.uz/newIndex
+      - https://uzbekcorpus.uz/authorCorpus
+      - https://uzbekcorpus.uz/education
+      - https://uzbekcorpus.uz/searchLemma
+      - https://uzbekcorpus.uz/aboutCorpus
+    note: Оммавий юклаб олиш йўқ; тўлиқ матн учун корпус муаллифларидан рухсат сўраш керак.
+
+  - id: UZ-TXT-02
+    name: Ўзбек тилининг таълимий корпуси (uzschoolcorpara.uz)
+    group: corpus
+    format: HTML / TXT
+    access: browse
+    origin: registry
+    urls:
+      - https://uzschoolcorpara.uz/
+
+  - id: UZ-TXT-03
+    name: Universal Dependencies — ўзбек тили трибанклари
+    group: corpus
+    format: CoNLL-U
+    access: bulk
+    origin: registry
+    urls:
+      - https://universaldependencies.org/uz/index.html
+      - https://universaldependencies.org/treebanks/uz_uzudt/index.html
+      - https://universaldependencies.org/treebanks/uz_ut/index.html
+    fetch:
+      - {type: git, url: https://github.com/UniversalDependencies/UD_Uzbek-UT}
+      - {type: git, url: https://github.com/UniversalDependencies/UD_Uzbek-UzUDT}
+
+  # ---------------------------------------------------------------- 1.2 Hugging Face
+  - id: UZ-TXT-04
+    name: Hugging Face — ўзбек тилидаги барча датасетлар каталоги
+    group: hf_dataset
+    format: Parquet / JSONL / CSV
+    access: browse
+    origin: registry
+    urls:
+      - https://huggingface.co/datasets?language=language:uzb
+    note: Каталог саҳифаси; ундаги муҳим датасетлар қуйида алоҳида келтирилган.
+
+  - id: UZ-TXT-05
+    name: tahrirchi/uz-books-v2 — ўзбекча китоблар корпуси
+    group: hf_dataset
+    format: Parquet
+    access: bulk
+    origin: registry
+    urls: [https://huggingface.co/datasets/tahrirchi/uz-books-v2]
+    fetch: [{type: hf, repo: tahrirchi/uz-books-v2}]
+
+  - id: UZ-TXT-06
+    name: murodbek/uz-books — тозаланган ўзбекча китоблар
+    group: hf_dataset
+    format: Parquet
+    access: bulk
+    origin: registry
+    urls: [https://huggingface.co/datasets/murodbek/uz-books]
+    fetch: [{type: hf, repo: murodbek/uz-books}]
+
+  - id: UZ-TXT-07
+    name: sukhrobnurali/uzbek-legal-corpus — қонунчилик корпуси
+    group: hf_dataset
+    format: Parquet / JSON
+    access: bulk
+    origin: registry
+    urls: [https://huggingface.co/datasets/sukhrobnurali/uzbek-legal-corpus]
+    fetch: [{type: hf, repo: sukhrobnurali/uzbek-legal-corpus}]
+
+  - id: UZ-TXT-08
+    name: MLDataScientist/Uzbek_news_dataset — 512 750 та янгилик мақоласи
+    group: hf_dataset
+    format: CSV / Parquet
+    access: bulk
+    origin: registry
+    urls: [https://huggingface.co/datasets/MLDataScientist/Uzbek_news_dataset]
+    fetch: [{type: hf, repo: MLDataScientist/Uzbek_news_dataset}]
+
+  - id: UZ-TXT-09
+    name: xkas2001/uzbek-language-dataset
+    group: hf_dataset
+    format: Parquet
+    access: bulk
+    origin: registry
+    urls: [https://huggingface.co/datasets/xkas2001/uzbek-language-dataset]
+    fetch: [{type: hf, repo: xkas2001/uzbek-language-dataset}]
+
+  - id: UZ-TXT-10
+    name: ML-Jonibek/English-Uzbek-Translation-1 — инглизча-ўзбекча параллел матн
+    group: hf_dataset
+    format: Parquet / CSV
+    access: bulk
+    origin: registry
+    urls: [https://huggingface.co/datasets/ML-Jonibek/English-Uzbek-Translation-1]
+    fetch: [{type: hf, repo: ML-Jonibek/English-Uzbek-Translation-1}]
+
+  - id: UZ-TXT-11
+    name: ZiyoVer/UzDataLab_kichik_dialog_dataseti — диалог ва шева матнлари
+    group: hf_dataset
+    format: Parquet / JSON
+    access: bulk
+    origin: registry
+    urls: [https://huggingface.co/datasets/ZiyoVer/UzDataLab_kichik_dialog_dataseti]
+    fetch: [{type: hf, repo: ZiyoVer/UzDataLab_kichik_dialog_dataseti}]
+
+  - id: UZ-TXT-12
+    name: Ўзбекча нутқ-матн (STT) корпуслари — транскрипциялар
+    group: hf_dataset
+    format: Parquet (аудио + матн)
+    access: bulk
+    origin: registry
+    urls:
+      - https://huggingface.co/datasets/k2speech/FeruzaSpeech_parquet_dataset
+      - https://huggingface.co/datasets/Abduqayum/Uzbek-STT-Dataset-780h
+    fetch:
+      - {type: hf, repo: k2speech/FeruzaSpeech_parquet_dataset, large: true}
+      - {type: hf, repo: Abduqayum/Uzbek-STT-Dataset-780h, large: true}
+    note: Аудио билан бирга келади, ҳажми катта (юзлаб ГБ бўлиши мумкин); --include-large билан юкланади.
+
+  - id: UZ-TXT-13
+    name: Халқаро мега-корпусларнинг ўзбекча қисми (CulturaX, OSCAR, OPUS-100, Belebele)
+    group: hf_dataset
+    format: Parquet / JSONL
+    access: bulk
+    origin: registry
+    urls:
+      - https://huggingface.co/datasets/uonlp/CulturaX
+      - https://huggingface.co/datasets/oscar-corpus/OSCAR-2301
+      - https://huggingface.co/datasets/oscar-corpus/OSCAR-2201
+      - https://huggingface.co/datasets/Helsinki-NLP/opus-100
+      - https://huggingface.co/datasets/facebook/belebele
+    fetch:
+      - {type: hf, repo: uonlp/CulturaX, patterns: ["uz/*"], gated: true}
+      - {type: hf, repo: oscar-corpus/OSCAR-2301, patterns: ["*uz_meta*"], gated: true, note: unverified}
+      - {type: hf, repo: Helsinki-NLP/opus-100, patterns: ["*en-uz*"]}
+      - {type: hf, repo: facebook/belebele, patterns: ["*uzn_Latn*"]}
+    note: CulturaX ва OSCAR учун Hugging Face аккаунтида шартларни қабул қилиш ва HF_TOKEN керак.
+
+  # ---------------------------------------------------------------- 1.3 GitHub
+  - id: UZ-TXT-14
+    name: anvarnarz/uzwords — ўзбек сўзлари рўйхати
+    group: github
+    format: TXT / CSV
+    access: bulk
+    origin: registry
+    urls: [https://github.com/anvarnarz/uzwords]
+    fetch: [{type: git, url: https://github.com/anvarnarz/uzwords}]
+
+  - id: UZ-TXT-15
+    name: kodchi/uzbek-words ва uzbek-transliterator
+    group: github
+    format: TXT / JSON
+    access: bulk
+    origin: registry
+    urls:
+      - https://github.com/kodchi/uzbek-words
+      - https://github.com/kodchi/uzbek-transliterator
+    fetch:
+      - {type: git, url: https://github.com/kodchi/uzbek-words}
+      - {type: git, url: https://github.com/kodchi/uzbek-transliterator}
+
+  - id: UZ-TXT-16
+    name: UlugbekSalaev/UzTransliterator
+    group: github
+    format: код ва қоидалар
+    access: bulk
+    origin: registry
+    urls: [https://github.com/UlugbekSalaev/UzTransliterator]
+    fetch: [{type: git, url: https://github.com/UlugbekSalaev/UzTransliterator}]
+
+  - id: UZ-TXT-17
+    name: SanatbekMatlatipov/robust-parsing-uzbek — spaCy модули, стоп-сўзлар
+    group: github
+    format: Python / TXT
+    access: bulk
+    origin: registry
+    urls: [https://github.com/SanatbekMatlatipov/robust-parsing-uzbek]
+    fetch: [{type: git, url: https://github.com/SanatbekMatlatipov/robust-parsing-uzbek}]
+
+  - id: UZ-TXT-18
+    name: sssplash6/uzbek-sentiment-analysis
+    group: github
+    format: CSV
+    access: bulk
+    origin: registry
+    urls: [https://github.com/sssplash6/uzbek-sentiment-analysis]
+    fetch: [{type: git, url: https://github.com/sssplash6/uzbek-sentiment-analysis}]
+
+  # ---------------------------------------------------------------- 1.4 Викимедиа ва луғатлар
+  - id: UZ-TXT-19
+    name: Vikimanba (Wikisource, ўзбекча бўлим)
+    group: wiki
+    format: HTML / wikitext
+    access: browse
+    origin: registry
+    urls:
+      - https://wikisource.org/wiki/Wikisource:Main_Page/Bosh_sahifa/O%E2%80%98zbek
+    note: Ўзбекча матнлар кўп тилли wikisource.org ичида; алоҳида дамп йўқ, MediaWiki API орқали категория бўйича олиш мумкин.
+
+  - id: UZ-TXT-20
+    name: Vikilugʻat (uz.wiktionary.org)
+    group: wiki
+    format: XML дамп
+    access: bulk
+    origin: registry
+    urls:
+      - https://uz.wiktionary.org/wiki/Bosh_sahifa
+      - https://uz.wiktionary.org/wiki/lug%CA%BBat
+      - https://uz.wiktionary.org/wiki/%D0%BB%D1%83%D2%93%D0%B0%D1%82
+    fetch:
+      - {type: url, url: https://dumps.wikimedia.org/uzwiktionary/latest/uzwiktionary-latest-pages-articles.xml.bz2}
+
+  - id: UZ-TXT-21
+    name: Ихтисослашган онлайн луғатлар (izoh.uz, imlo.uz, sinonim.uz)
+    group: dictionary
+    format: HTML
+    access: browse
+    origin: registry
+    urls: [https://izoh.uz/, https://imlo.uz/, https://sinonim.uz/]
+
+  - id: UZ-TXT-22
+    name: Qomus.info — Ўзбекистон Миллий Энциклопедияси
+    group: dictionary
+    format: HTML
+    access: browse
+    origin: registry
+    urls: [https://qomus.info/encyclopedia/cat-k/kutubxona-katalogi-uz/]
+
+  # ---------------------------------------------------------------- 1.5 Бадиий адабиёт порталлари
+  - id: UZ-TXT-23
+    name: Ziyouz — электрон матнли ва EPUB адабий фондлар
+    group: literature_portal
+    format: EPUB / HTML
+    access: browse
+    origin: registry
+    urls:
+      - https://n.ziyouz.com/kutubxona/category/3-ziyouz-com-mobil-kutubxonasi
+      - https://n.ziyouz.com/kutubxona/category/153-alisher-navoiy-g-azallari
+      - https://ziyouz.uz/hikmatlar/ozbek-xalq-maqollari/
+      - https://ziyouz.uz/hikmatlar/ozbek-xalq-maqollari/yil-fasllari-va-tabiat-hodisalari-haqida-maqollar/
+      - https://ziyouz.uz/hikmatlar/ozbek-xalq-maqollari/masuliyat-va-masuliyatsizlik-haqida-maqollar/
+      - https://ziyouz.uz/kutubxona/ziyouz/?lng=lat
+      - https://ziyouz.uz/kutubxona/ziyouz/
+
+  - id: UZ-TXT-24
+    name: Хуршид Даврон кутубхонаси (kh-davron.uz)
+    group: literature_portal
+    format: HTML
+    access: browse
+    origin: registry
+    urls:
+      - https://kh-davron.uz/kutubxona/alisher-navoiy/navoiy-ruboiylar.html
+      - https://kh-davron.uz/kutubxona/page/4
+      - https://kh-davron.uz/category/kutubxona/page/18
+      - https://kh-davron.uz/cat/kutubxona/page/25
+      - https://kh-davron.uz/books-by-khurshid-davron
+
+  - id: UZ-TXT-25
+    name: Tafakkur.net ва Adiblar GitBook — шеърият
+    group: literature_portal
+    format: HTML
+    access: browse
+    origin: registry
+    urls:
+      - https://tafakkur.net/sherlar
+      - https://adiblar.gitbook.io/adiblar/ruboiylar/untitled
+
+  - id: UZ-TXT-26
+    name: Jadidlar.uz — жадидчилик платформаси
+    group: literature_portal
+    format: HTML / PDF
+    access: browse
+    origin: registry
+    urls: [https://jadidlar.uz/]
+
+  # ---------------------------------------------------------------- 2.1 Йирик электрон кутубхоналар
+  - id: UZ-DOC-01
+    name: Ziyouz кутубхонаси — PDF/DOC/DJVU китоблар
+    group: library
+    format: PDF / DOC / DJVU / EPUB
+    access: browse
+    origin: registry
+    urls:
+      - https://www.ziyouz.com/kutubxona/barcha-kitoblar
+      - https://n.ziyouz.com/kutubxona/category/1-ziyouz-com-kutubxonasi
+      - https://www.ziyouz.com/kutubxona
+      - https://n.ziyouz.com/kutubxona/category/40-alisher-navoiy-asarlari
+      - https://n.ziyouz.com/kutubxona/category/39-o-zbek-mumtoz-adabiyoti
+      - https://n.ziyouz.com/kutubxona/category/101-o-zbek-xalq-og-zaki-ijodi
+      - https://ziyouz.uz/kutubxona/ziyouz/uzbek-xalq-ogzaki-ijodi/attachment/kutubxona-uzbek-xalq-ogzaki-ijodi/?lng=lat
+      - https://n.ziyouz.com/kutubxona/barcha-kitoblar?start=9
+      - https://n.ziyouz.com/kutubxona/category/8-o-zbek-dramaturgiyasi
+      - https://ziyouz.uz/durdona-toplamlar/
+      - https://n.ziyouz.com/kutubxona/category/150-tarix
+      - https://ziyouz.uz/durdona-toplamlar/ozbekistonning-yangi-tarixi/attachment/tarix-2/?lng=lat
+      - https://n.ziyouz.com/kutubxona/barcha-kitoblar?start=22
+      - https://n.ziyouz.com/kutubxona/category/2-ziyouz-com-audiokutubxonasi
+    note: Минглаб китоб; кўпчилиги муаллифлик ҳуқуқи остида, оммавий юклаб олишдан олдин сайт эгаси билан келишиш керак.
+
+  - id: UZ-DOC-02
+    name: Ўзбекистон Миллий кутубхонаси (natlib.uz)
+    group: library
+    format: PDF / медиа
+    access: direct
+    origin: registry
+    urls:
+      - https://qr.natlib.uz/
+      - https://media.natlib.uz/
+      - http://einfolib.uz/post/uzbekiston-millij-kutubhonasi-maqolalar-tahlili
+    fetch:
+      - {type: url, url: https://einfolib.uz/source/nashrlar/pdf/FF-OcAD4HAEzeOsVhvJ41XbfNZjzNgEc.pdf}
+
+  - id: UZ-DOC-03
+    name: Kitobxon.com ва Mutolaa.com — электрон ва аудио китоблар
+    group: library
+    format: PDF / EPUB / FB2 / аудио
+    access: browse
+    origin: registry
+    urls:
+      - https://kitobxon.com/uz/kitoblar
+      - https://kitobxon.com/ru/kitoblar?sort=views&searchq1=kitob&pg=4
+      - https://kitobxon.com/ru/kitoblar?sort=views&searchq1=kitob&pg=14
+      - https://mutolaa.com/uz
+
+  # ---------------------------------------------------------------- 2.2 Дарсликлар
+  - id: UZ-DOC-04
+    name: Unilibrary.uz — ОТМлар ягона электрон кутубхонаси
+    group: textbook
+    format: PDF
+    access: browse
+    origin: registry
+    urls: [https://unilibrary.uz/literature]
+
+  - id: UZ-DOC-05
+    name: Ziyonet.uz электрон кутубхонаси
+    group: textbook
+    format: PDF / DOC
+    access: browse
+    origin: registry
+    urls:
+      - https://library.ziyonet.uz/uzc
+      - https://ziyonet.uz/ru/library
+      - https://library.ziyonet.uz/ru/book/3465
+
+  - id: UZ-DOC-06
+    name: Ziyouz дарсхонаси — мактаб, коллеж ва ОТМ дарсликлари
+    group: textbook
+    format: PDF / DJVU
+    access: direct
+    origin: registry
+    urls:
+      - https://n.ziyouz.com/kutubxona/category/4-ziyouz-com-darsxonasi
+      - https://n.ziyouz.com/library
+    fetch:
+      - {type: url, url: "https://n.ziyouz.com/books/kollej_va_otm_darsliklari/ona-tili_va_adabiyot/Adabiyot%20(majmua,%201-kitob).pdf"}
+      - {type: url, url: "https://ziyouz.com/books/kollej_va_otm_darsliklari/ona-tili_va_adabiyot/Adabiyot%20(O'.Boboyorov,%20F.Xolsaidov).pdf"}
+
+  - id: UZ-DOC-07
+    name: Университетлар электрон кутубхоналари
+    group: textbook
+    format: PDF / DOCX
+    access: direct
+    origin: registry
+    urls:
+      - https://dilib.tsuos.uz/resources?page=42&sort=published_date
+      - https://dilib.tsuos.uz/resources/01KMD0ZADE798V6DYTRNWCGX73
+      - https://dilib.tsuos.uz/resources/01FPW4707DV72KQ6N611M4WH7J
+      - https://elib.tsul.uz/
+      - https://npuu.uz/publishing/uchebnik
+      - https://e-library.samdu.uz/electron-books/bookview/08df124e-faa5-4a8a-8b2a-29dfbfe062c8
+      - https://namdu.uz/books/
+      - https://library.tdau.uz/uz/books/3633
+      - https://akbt.tkti.uz/uz/books/5753
+      - https://akbt.nsumt.uz/uz/books/11018
+      - https://library.dtpi.uz/ru/jurnallar/4
+    fetch:
+      - {type: url, url: https://uniwork.buxdu.uz/resurs/48634_1_90551D18955BB41C7D174F2FB2B811D308842BCC.pdf}
+
+  # ---------------------------------------------------------------- 2.3 Луғатлар ва энциклопедиялар
+  - id: UZ-DOC-08
+    name: Изоҳли, имло, синоним ва антоним луғатлар (PDF)
+    group: dictionary
+    format: PDF / DJVU
+    access: direct
+    origin: registry
+    urls:
+      - https://archive.org/details/izohlilugat5jild
+      - https://ziyouz.uz/durdona-toplamlar/uzbek-tilining-izohli-lugati/
+      - https://unilibrary.uz/literature/880002
+      - https://unilibrary.uz/literature/71643
+      - https://unilibrary.uz/literature/849920
+    fetch:
+      - {type: ia, item: izohlilugat5jild}
+      - {type: url, url: https://tilbilig.uz/media/pdf-lugatlar/Ozbek_tilining_izohli_lugati_1-jild.pdf/}
+
+  - id: UZ-DOC-09
+    name: Икки тилли, соҳавий ва тарихий луғатлар, Миллий энциклопедия
+    group: dictionary
+    format: PDF / DJVU / DOC
+    access: direct
+    origin: registry
+    urls:
+      - https://ziyouz.uz/kutubxona/ziyouz/lugatlar/
+      - https://n.ziyouz.com/kutubxona/category/102-lug-atlar
+      - https://n.ziyouz.com/kutubxona/barcha-kitoblar?start=21
+    fetch:
+      - {type: url, url: https://dilib.tsuos.uz/en/resources/01KPRKHWMETN8KKYVQCHVWJVHM/pdf}
+      - {type: url, url: "https://www.ziyouz.com/books/uzbekiston_milliy_ensiklopediyasi/O'zbekiston%20Milliy%20Ensiklopediyasi%20-%20M%20harfi.pdf"}
+      - {type: ia, item: dli.pahar.2717}
+      - {type: ia, item: adatssuad00fuzuuoft}
+
+  # ---------------------------------------------------------------- 2.4 Илмий нашрлар
+  - id: UZ-DOC-10
+    name: Diss.natlib.uz — диссертациялар ва авторефератлар
+    group: science
+    format: PDF / онлайн
+    access: browse
+    origin: registry
+    urls:
+      - https://diss.natlib.uz/uz-Cyrl-UZ/Search/Query?page=1282&RW.USTSpecialtyCodeId=2
+      - https://diss.natlib.uz/uz-Latn-UZ/Search/Query?page=39&RW.USTSpecialtyCodeTypeId=2
+      - https://diss.natlib.uz/uz-Cyrl-UZ/ResearchWork/OnlineView/33312
+
+  - id: UZ-DOC-11
+    name: inLibrary.uz ва илмий журналлар
+    group: science
+    format: PDF
+    access: direct
+    origin: registry
+    urls:
+      - https://inlibrary.uz/index.php/index/journals
+      - https://inlibrary.uz/index.php/science-research
+      - https://inlibrary.uz/index.php/universaljurnal
+      - https://inlibrary.uz/index.php/yoitj/issue/archive
+    fetch:
+      - {type: url, url: https://adabiyotxazinasi.com/index.php/conf/article/download/5356/6034}
+    note: inLibrary — OJS платформаси; очиқ журналлар OAI-PMH орқали метаданни бериши мумкин (unverified).
+
+  - id: UZ-DOC-12
+    name: Oyina.uz ва академик тадқиқот нашрлари
+    group: science
+    format: PDF
+    access: direct
+    origin: registry
+    urls:
+      - https://www.researchgate.net/publication/356815211_O'zbek_tili_elektron_korpusining_httpuzbekcorpusuz_leksikografik_imkoniyatlari_xususida
+      - https://www.researchgate.net/publication/359629629_Ozbek_tilining_ta'limiy_korpusi_va_uning_imkoniyatlari
+      - https://www.researchgate.net/publication/393705981_Creating_a_database_of_uzbek_words_and_part-of-speeches_using_machine_learning_methods_and_lemmatization
+      - https://aclanthology.org/2026.lrec-1.912/
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC11848777/
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC10904177/
+    fetch:
+      - {type: url, url: https://oyina.uz/storage/publications/January2024/1fdkIB3DyA3VOLaeDRfI.pdf}
+      - {type: url, url: https://oyina.uz/storage/publications/January2024/ySFRgpFSxuw5tOxqgZhK.pdf}
+      - {type: url, url: https://aclanthology.org/2025.resourceful-1.1.pdf}
+
+  # ---------------------------------------------------------------- 2.5 Диний-маърифий адабиёт
+  - id: UZ-DOC-13
+    name: Islom.uz ва Hilolnashr.uz маърифий кутубхонаси
+    group: religious
+    format: PDF / электрон китоб
+    access: browse
+    origin: registry
+    urls:
+      - https://islom.uz/kutubxona
+      - https://islom.uz/maqola/2706
+      - https://islom.uz/maqolalar?category=128
+      - https://hilolnashr.uz/kitoblar
+      - https://hilolnashr.uz/islom-odoblari-ensiklopediyasi
+      - https://hilolnashr.uz/islom-mamlakatlari-entsiklopediyasi
+      - https://hilolnashr.uz/ozbek-tili-izohli-lugati
+
+  # ---------------------------------------------------------------- 2.6 Расмий ҳужжатлар
+  - id: UZ-DOC-14
+    name: Lex.uz ва давлат расмий ҳужжатлар базалари
+    group: legal
+    format: DOC / PDF / HTML
+    access: browse
+    origin: registry
+    urls:
+      - https://www.lex.uz/index.aspx
+      - https://lex.uz/docs/6451070
+      - https://constitution.uz/en/clause/index
+      - https://gov.uz/en/uzedu/sections/view/59909
+      - https://my.gov.uz/uz/statistics
+    note: Расмий ҳужжатлар матни очиқ; тўлиқ йиғиш учун UZ-TXT-07 (тайёр қонунчилик корпуси) қулайроқ.
+
+  # ================================================================ Қўшимча манбалар
+  - id: UZ-ADD-01
+    name: Ўзбекча Википедия (uz.wikipedia.org) дампи
+    group: wiki
+    format: XML дамп
+    access: bulk
+    origin: added
+    urls:
+      - https://uz.wikipedia.org/
+      - https://dumps.wikimedia.org/uzwiki/latest/
+      - https://huggingface.co/datasets/yakhyo/uz-wiki
+    fetch:
+      - {type: url, url: https://dumps.wikimedia.org/uzwiki/latest/uzwiki-latest-pages-articles.xml.bz2}
+      - {type: hf, repo: yakhyo/uz-wiki}
+
+  - id: UZ-ADD-02
+    name: wikimedia/wikipedia — тозаланган ўзбекча Википедия (Parquet)
+    group: hf_dataset
+    format: Parquet
+    access: bulk
+    origin: added
+    urls: [https://huggingface.co/datasets/wikimedia/wikipedia]
+    fetch: [{type: hf, repo: wikimedia/wikipedia, patterns: ["*.uz/*"]}]
+
+  - id: UZ-ADD-03
+    name: tahrirchi/uz-crawl — ўзбекча веб-матнлар корпуси
+    group: hf_dataset
+    format: Parquet
+    access: bulk
+    origin: added
+    urls: [https://huggingface.co/datasets/tahrirchi/uz-crawl]
+    fetch: [{type: hf, repo: tahrirchi/uz-crawl}]
+
+  - id: UZ-ADD-04
+    name: tahrirchi/uz-books (1-версия)
+    group: hf_dataset
+    format: Parquet
+    access: bulk
+    origin: added
+    urls: [https://huggingface.co/datasets/tahrirchi/uz-books]
+    fetch: [{type: hf, repo: tahrirchi/uz-books}]
+
+  - id: UZ-ADD-05
+    name: tahrirchi/lutfiy — ўзбекча-инглизча/русча параллел корпус
+    group: hf_dataset
+    format: Parquet
+    access: bulk
+    origin: added
+    urls:
+      - https://huggingface.co/datasets/tahrirchi/lutfiy
+      - https://aclanthology.org/2025.wmt-1.83/
+    fetch: [{type: hf, repo: tahrirchi/lutfiy}]
+
+  - id: UZ-ADD-06
+    name: murodbek/uz-text-classification — категорияланган янгилик матнлари
+    group: hf_dataset
+    format: Parquet
+    access: bulk
+    origin: added
+    urls: [https://huggingface.co/datasets/murodbek/uz-text-classification]
+    fetch: [{type: hf, repo: murodbek/uz-text-classification}]
+
+  - id: UZ-ADD-07
+    name: FineWeb-2 — ўзбекча қисм (uzn_Latn / uzn_Cyrl)
+    group: hf_dataset
+    format: Parquet
+    access: bulk
+    origin: added
+    urls: [https://huggingface.co/datasets/HuggingFaceFW/fineweb-2]
+    fetch: [{type: hf, repo: HuggingFaceFW/fineweb-2, patterns: ["*uzn_*"], large: true}]
+
+  - id: UZ-ADD-08
+    name: MADLAD-400 — ўзбекча қисм
+    group: hf_dataset
+    format: JSONL.GZ
+    access: bulk
+    origin: added
+    urls: [https://huggingface.co/datasets/allenai/MADLAD-400]
+    fetch: [{type: hf, repo: allenai/MADLAD-400, patterns: ["data/uz/*"], large: true, note: unverified}]
+
+  - id: UZ-ADD-09
+    name: CC-100 — ўзбекча веб-матн
+    group: corpus
+    format: TXT.XZ
+    access: bulk
+    origin: added
+    urls: [https://data.statmt.org/cc-100/]
+    fetch: [{type: url, url: https://data.statmt.org/cc-100/uz.txt.xz}]
+
+  - id: UZ-ADD-10
+    name: HPLT v2 — ўзбекча веб-матн
+    group: corpus
+    format: JSONL.ZST
+    access: browse
+    origin: added
+    urls:
+      - https://hplt-project.org/datasets/v2.0
+      - https://aclanthology.org/2025.acl-long.854
+    note: Файллар рўйхати hplt-project.org саҳифасида (uzn_Latn); ҳавола тузилмаси unverified.
+
+  - id: UZ-ADD-11
+    name: Leipzig Corpora Collection — ўзбекча жумлалар корпуслари
+    group: corpus
+    format: TXT (tar.gz)
+    access: browse
+    origin: added
+    urls:
+      - https://curl.corpora.uni-leipzig.de/languages/uzb
+      - https://wortschatz.uni-leipzig.de/en/download
+    note: Юклаб олиш саҳифасида ўзбекча (uzb) корпуслар рўйхати бор; файл номлари йил ва ҳажмга қараб ўзгаради.
+
+  - id: UZ-ADD-12
+    name: FLORES+ — ўзбекча эталон таржима матнлари
+    group: hf_dataset
+    format: Parquet
+    access: bulk
+    origin: added
+    urls: [https://huggingface.co/datasets/openlanguagedata/flores_plus]
+    fetch: [{type: hf, repo: openlanguagedata/flores_plus, patterns: ["*uzn_Latn*"], gated: true}]
+
+  - id: UZ-ADD-13
+    name: OPUS — ўзбекча параллел корпуслар тўплами
+    group: corpus
+    format: Moses / TMX
+    access: browse
+    origin: added
+    urls: [https://opus.nlpl.eu/results/en&uz/corpus-result-table]
+    note: Tatoeba, OpenSubtitles, WikiMatrix, CCMatrix ва бошқа ўзбекча жуфтликлар; ҳар бирининг лицензияси алоҳида.
+
+  - id: UZ-ADD-14
+    name: tahrirchi/uzlib — ўзбек тили NLP кутубхонаси
+    group: github
+    format: Python / маълумотлар
+    access: bulk
+    origin: added
+    urls: [https://github.com/tahrirchi/uzlib]
+    fetch: [{type: git, url: https://github.com/tahrirchi/uzlib}]
+
+  - id: UZ-ADD-15
+    name: UzSentiNER v1 — 30 000 жумлали сентимент ва NER корпуси (Mendeley Data)
+    group: corpus
+    format: CSV
+    access: browse
+    origin: added
+    urls: [https://data.mendeley.com/datasets/htkpynj4vb/1]
+
+  - id: UZ-ADD-16
+    name: Ўзбек-қозоқ параллел матнлар датасети (Data in Brief, 2024)
+    group: corpus
+    format: TXT / CSV
+    access: browse
+    origin: added
+    urls:
+      - https://doaj.org/article/7a69373233854579b051cfd8c8004ab7
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC10904177/
+    note: Мақолада датасет ҳаволаси келтирилган.
+
+  - id: UZ-ADD-17
+    name: Mozilla Common Voice ва Google FLEURS — ўзбекча транскрипциялар
+    group: hf_dataset
+    format: TSV / Parquet (аудио + матн)
+    access: browse
+    origin: added
+    urls:
+      - https://commonvoice.mozilla.org/uz/datasets
+      - https://huggingface.co/datasets/google/fleurs
+    note: Common Voice юклаш учун сайтда рўйхатдан ўтиш керак.
+
+  - id: UZ-ADD-18
+    name: Mehr kutubxonasi ва бошқа электрон китоб дўконлари (mehrkutubxonasi.uz, Asaxiy Books, book.uz)
+    group: library
+    format: PDF / EPUB / аудио
+    access: browse
+    origin: added
+    urls:
+      - https://mehrkutubxonasi.uz/
+      - https://asaxiy.uz/
+      - https://book.uz/
+    note: Тижорий ёки муаллифлик ҳуқуқи остидаги китоблар; фақат каталог сифатида.

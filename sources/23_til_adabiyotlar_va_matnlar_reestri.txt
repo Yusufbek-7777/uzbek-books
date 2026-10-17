@@ -1,0 +1,660 @@
+================================================================================
+ЎЗБЕК ТИЛИ ВА 23 ТА ЖАҲОН ТИЛЛАРИДАГИ ИЛМИЙ, БАДИИЙ, НАСРИЙ, НАЗМИЙ, ШЕЪРИЙ,
+ОММАБОП, РАСМИЙ АДАБИЁТЛАР, ДАРСЛИКЛАР, ЛУҒАТЛАР ВА МАТН КОРПУСЛАРИНИНГ
+ЯГОНА КЕНГАЙТИРИЛГАН РЕЕСТРИ
+================================================================================
+
+Мазкур ҳужжат иккита йирик қисмдан иборат:
+1-ҚИСМ: ЎЗБЕК ТИЛИДАГИ БАРЧА МАНБАЛАРНИНГ ТЎЛИҚ ВА МУКAММАЛ РЕЕСТРИ
+        - I бўлим: Электрон матнли ҳолатда ажратиб олинадиган ўзбекча манбалар
+          (TXT, JSON, CSV, Parquet, CoNLL-U, XML, HTML, EPUB, NLP датасетлар ва корпуслар).
+        - II бўлим: PDF, Word (DOC/DOCX), DJVU, FB2 ва бошқа форматдаги ўзбекча
+          китоблар, дарсликлар, луғатлар, энциклопедиялар, илмий ва расмий ҳужжатлар.
+2-ҚИСМ: 23 ТА ТИЛ БЎЙИЧА ХАЛҚАРО МАНБАЛАР РЕЕСТРИ (Матнли ҳамда PDF/DOCX форматларда).
+
+
+################################################################################
+1-ҚИСМ. ЎЗБЕК ТИЛИДАГИ БАРЧА МАНБАЛАРНИНГ ТЎЛИҚ РЕЕСТРИ
+################################################################################
+
+================================================================================
+I БЎЛИМ (ЎЗБЕК ТИЛИ): ЭЛЕКТРОН МАТНЛИ ҲОЛАТИНИ АЖРАТИБ ОЛИШ МУМКИН БЎЛГАН
+МАНБАЛАР, МИЛЛИЙ КОРПУСЛАР, NLP/AI ДАТАСЕТЛАР ВА ОЧИҚ МАТН БАЗАЛАРИ
+(Форматлар: TXT, JSON, JSONL, CSV, Parquet, CoNLL-U, XML, HTML, EPUB)
+================================================================================
+
+--------------------------------------------------------------------------------
+1.1. ЎЗБЕК ТИЛИ МИЛЛИЙ ВА ТАЪЛИМИЙ ЭЛЕКТРОН МАТН КОРПУСЛАРИ
+--------------------------------------------------------------------------------
+[UZ-TXT-01] Ўзбек тилининг электрон миллий корпуси (Uzbekcorpus.uz)
+  Мазмуни: Илмий, бадиий, публицистик, расмий ва сўзлашув услубидаги 200 миллиондан
+  ортиқ сўзни қамраб олган электрон матнлар, леммалар, токенлар, конкорданс ва
+  морфологик маълумотлар базаси (Жадид, Совет ва Мустақиллик даври матнлари).
+  Формати: Электрон матн (HTML / Конкорданс)
+  - Асосий қидирув тизими: https://uzbekcorpus.uz/newIndex
+  - Муаллифлик корпуси (бадиий, назмий, илмий, расмий): https://uzbekcorpus.uz/authorCorpus
+  - Таълимий корпус ва дарсликлар: https://uzbekcorpus.uz/education
+  - Лемма бўйича матн ва сўз излаш: https://uzbekcorpus.uz/searchLemma
+  - Корпус таркиби ҳақида маълумот: https://uzbekcorpus.uz/aboutCorpus
+
+[UZ-TXT-02] Ўзбек тилининг таълимий корпуси (Uzschoolcorpara.uz)
+  Мазмуни: Мактаб дарсликлари ва ўқув луғатларига асосланган электрон шаклдаги матн
+  парчалари, таълимий лексика ва морфологик таҳлил базаси.
+  Формати: Электрон матн (HTML/TXT)
+  - Ҳавола: https://uzschoolcorpara.uz/
+
+[UZ-TXT-03] Universal Dependencies (UD) — Ўзбек тилининг синтактик ва морфологик
+            белгиланган матн корпуслари (Treebanks)
+  Мазмуни: Бадиий ва янгиликлар матнларидан олинган, морфологик ва синтактик жиҳатдан
+  белгиланган очиқ электрон матнлар.
+  Формати: CoNLL-U / Plain Text (.txt)
+  - UD Uzbek бош саҳифаси: https://universaldependencies.org/uz/index.html
+  - UD_Uzbek-UzUDT корпуси: https://universaldependencies.org/treebanks/uz_uzudt/index.html
+  - UD_Uzbek-UT корпуси: https://universaldependencies.org/treebanks/uz_ut/index.html
+
+
+--------------------------------------------------------------------------------
+1.2. HUGGING FACE ТИЗИМИДАГИ ЎЗБЕК ТИЛИ ОЧИҚ МАТН ДАТАСЕТЛАРИ (КИТОБЛАР,
+     ҚОНУНЛАР, ЯНГИЛИКЛАР, ТАРЖИМА ВА ДИАЛОГ КОРПУСЛАРИ)
+--------------------------------------------------------------------------------
+[UZ-TXT-04] Барча ўзбек тилидаги (uzb) очиқ датасетларнинг умумий каталоги
+  Мазмуни: Hugging Face платформасидаги ўзбек тилига оид барча матнли ва овозли базалар.
+  Формати: Parquet, JSONL, CSV, TXT
+  - Ҳавола: https://huggingface.co/datasets?language=language:uzb
+
+[UZ-TXT-05] Tahrirchi / Uz-Books-v2 — Ўзбек тилидаги китоблар корпуси (2-версия)
+  Мазмуни: Лотин ва кирилл алифбосидаги ўзбекча китоблардан ажратиб олинган ва
+  тозаланган йирик электрон матн корпуси.
+  Формати: Parquet / JSONL / TXT
+  - Ҳавола: https://huggingface.co/datasets/tahrirchi/uz-books-v2
+
+[UZ-TXT-06] Murodbek / Uz-Books — Тозаланган ўзбекча китоблар матн базаси
+  Мазмуни: Бадиий, илмий ва оммабоп ўзбекча китобларнинг тоза электрон матнлари тўплами.
+  Формати: Parquet / TXT
+  - Ҳавола: https://huggingface.co/datasets/murodbek/uz-books
+
+[UZ-TXT-07] Sukhrobnurali / Uzbek-Legal-Corpus — Ўзбекистон миллий қонунчилиги матн корпуси
+  Мазмуни: Лотин алифбосидаги Ўзбекистон қонун ҳужжатларининг моддалар бўйича
+  структурланган ва тозаланган электрон матн корпуси.
+  Формати: Parquet / JSON / TXT
+  - Ҳавола: https://huggingface.co/datasets/sukhrobnurali/uzbek-legal-corpus
+
+[UZ-TXT-08] MLDataScientist / Uzbek_news_dataset — Ўзбек янгиликлари ва мақолалари корпуси
+  Мазмуни: 512 750 та мақола (120 миллион сўз) ҳажмидаги ўзбек тилидаги мақолалар
+  ва матнлар классификацияси базаси.
+  Формати: CSV / Parquet / TXT
+  - Ҳавола: https://huggingface.co/datasets/MLDataScientist/Uzbek_news_dataset
+
+[UZ-TXT-09] Xkas2001 / Uzbek-Language-Dataset — Ўзбек тили матн корпуси
+  Мазмуни: Apache-2.0 очиқ лицензияси асосидаги ўзбек тили матнлар тўплами.
+  Формати: Parquet / TXT
+  - Ҳавола: https://huggingface.co/datasets/xkas2001/uzbek-language-dataset
+
+[UZ-TXT-10] ML-Jonibek / English-Uzbek-Translation-1 — Инглизча-ўзбекча параллел матнлар
+  Мазмуни: Сўзлашув ва янгиликлар услубидаги инглизча-ўзбекча параллел таржима корпуси.
+  Формати: Parquet / CSV / TXT
+  - Ҳавола: https://huggingface.co/datasets/ML-Jonibek/English-Uzbek-Translation-1
+
+[UZ-TXT-11] ZiyoVer / UzDataLab_kichik_dialog_dataseti — Ўзбекча диалог ва шева матнлари
+  Мазмуни: Ўзбек адабий тили ва шеваларидаги диалог матнлари ҳамда инглиз/рус таржималари.
+  Формати: Parquet / JSON / TXT
+  - Ҳавола: https://huggingface.co/datasets/ZiyoVer/UzDataLab_kichik_dialog_dataseti
+
+[UZ-TXT-12] Транскрипцияланган ўзбекча нутқ-матн (Speech-to-Text) корпуслари
+  Мазмуни: Юзлаб соатлик ўзбекча матн сатрлари ва уларга мос аудио ёзувлар.
+  Формати: Parquet / TXT
+  - FeruzaSpeech датасети: https://huggingface.co/datasets/k2speech/FeruzaSpeech_parquet_dataset
+  - Abduqayum 780 соатлик STT базаси: https://huggingface.co/datasets/Abduqayum/Uzbek-STT-Dataset-780h
+
+[UZ-TXT-13] Халқаро мега-корпуслар таркибидаги ўзбек тили матн базалари
+  Мазмуни: Миллионлаб сўзлик тозаланган ўзбекча веб-саҳифалар ва таржима матнлари.
+  Формати: Parquet / JSONL / TXT
+  - CulturaX (87 219 ҳужжат, 75,2 млн ўзбекча сўз): https://huggingface.co/datasets/uonlp/CulturaX
+  - CulturaX файллар дарахти: https://huggingface.co/datasets/uonlp/CulturaX/tree/main
+  - OSCAR-2301 ўзбекча веб-корпуси: https://huggingface.co/datasets/oscar-corpus/OSCAR-2301
+  - OSCAR-2201 ўзбекча веб-корпуси: https://huggingface.co/datasets/oscar-corpus/OSCAR-2201
+  - OPUS-100 ўзбекча-инглизча параллел корпус: https://huggingface.co/datasets/Helsinki-NLP/opus-100
+  - Facebook Belebele ўзбекча матнни тушуниш корпуси: https://huggingface.co/datasets/facebook/belebele
+
+
+--------------------------------------------------------------------------------
+1.3. GITHUB ОЧИҚ РЕПОЗИТОРИЙЛАРИДАГИ ЎЗБЕК ТИЛИ СЎЗЛАР БАЗАЛАРИ, ЛУҒАТЛАР
+     ВА NLP РЕСУРСЛАРИ (TXT, CSV, JSON, PYTHON)
+--------------------------------------------------------------------------------
+[UZ-TXT-14] Anvarnarz / Uzwords — Ўзбек тили сўзларининг очиқ электрон рўйхати
+  Мазмуни: Дастурий таъминот, имло текшируви ва тилшунослик тадқиқотлари учун
+  ўзбек тили сўзлари базаси.
+  Формати: TXT / CSV
+  - Ҳавола: https://github.com/anvarnarz/uzwords
+
+[UZ-TXT-15] Kodchi / Uzbek-Words ва Uzbek-Transliterator
+  Мазмуни: Ўзбек тилидаги сўзлар рўйхати ҳамда кирилл-лотин-кирилл транслитерация қоидалари.
+  Формати: TXT / JSON / JS
+  - Ўзбек сўзлари рўйхати: https://github.com/kodchi/uzbek-words
+  - Кирилл-лотин транслитератори: https://github.com/kodchi/uzbek-transliterator
+
+[UZ-TXT-16] UlugbekSalaev / UzTransliterator
+  Мазмуни: Ўзбек тили матнларини машинавий транслитерация қилиш ва нормаллаштириш базаси.
+  Формати: Очиқ код ва луғат қоидалари
+  - Ҳавола: https://github.com/UlugbekSalaev/UzTransliterator
+
+[UZ-TXT-17] SanatbekMatlatipov / Robust-Parsing-Uzbek
+  Мазмуни: spaCy учун ўзбек тили модули, стоп-сўзлар (stop_words.py) ва синтактик таҳлил базаси.
+  Формати: Python / TXT
+  - Ҳавола: https://github.com/SanatbekMatlatipov/robust-parsing-uzbek
+
+[UZ-TXT-18] Sssplash6 / Uzbek-Sentiment-Analysis
+  Мазмуни: Ўзбек тилидаги шарҳ ва матнларни ҳиссий (ижобий/салбий) таҳлил қилиш учун
+  очиқ матнлар датасети ва моделлар.
+  Формати: CSV / TXT
+  - Ҳавола: https://github.com/sssplash6/uzbek-sentiment-analysis
+
+
+--------------------------------------------------------------------------------
+1.4. ВИКИМЕДИА ВА ОНЛАЙН ЭНЦИКЛОПЕДИК/ЛУҒАТ ТИЗИМЛАРИ (ТОЗА ЭЛЕКТРОН МАТН)
+--------------------------------------------------------------------------------
+[UZ-TXT-19] Vikimanba (Wikisource O'zbek) — Очиқ матнлар кутубхонаси
+  Мазмуни: Муаллифлик ҳуқуқидан холи бўлган ўзбекча тарихий, адабий ва расмий манбаларнинг
+  тўлиқ электрон матнлари.
+  Формати: HTML / Wiki-text / EPUB
+  - Ҳавола: https://wikisource.org/wiki/Wikisource:Main_Page/Bosh_sahifa/O%E2%80%98zbek
+
+[UZ-TXT-20] Vikilugʻat (Uz.wiktionary.org) — Ўзбек тили эркин онлайн луғати ва тезауруси
+  Мазмуни: Сўзлар маъноси, этимологияси, транскрипцияси ва таржималари (CC BY-SA 4.0
+  эркин лицензияси асосида, шу жумладан ЎТИЛ базаси).
+  Формати: HTML / XML Dump
+  - Бош саҳифа: https://uz.wiktionary.org/wiki/Bosh_sahifa
+  - Лотин ёзувидаги луғат бўлими: https://uz.wiktionary.org/wiki/lug%CA%BBat
+  - Кирилл ёзувидаги луғат бўлими: https://uz.wiktionary.org/wiki/%D0%BB%D1%83%D2%93%D0%B0%D1%82
+
+[UZ-TXT-21] Ўзбек тилининг ихтисослашган электрон луғат порталлари (Изоҳли, Имло, Синоним)
+  Мазмуни: Қидирув ва матн ажратиб олиш учун қулай бўлган онлайн луғатлар.
+  Формати: HTML электрон матн
+  - Izoh.uz (Ўзбек тилининг изоҳли луғати): https://izoh.uz/
+  - Imlo.uz (Лотин ва кирилл алифбосидаги имло луғати): https://imlo.uz/
+  - Sinonim.uz (3300+ сўз ва 900+ синоним қаторлари луғати): https://sinonim.uz/
+
+[UZ-TXT-22] Qomus.info — Ўзбекистон Миллий Энциклопедиясининг электрон матн базаси
+  Мазмуни: Барча фан ва соҳалар бўйича энциклопедик мақолаларнинг электрон матнли шакли.
+  Формати: HTML электрон матн
+  - Ҳавола: https://qomus.info/encyclopedia/cat-k/kutubxona-katalogi-uz/
+
+
+--------------------------------------------------------------------------------
+1.5. БАДИИЙ АДАБИЁТ, ШЕЪРИЯТ, ФОЛЬКЛОР ВА ЖАДИД МЕРОСИ ЭЛЕКТРОН МАТН ПОРТАЛЛАРИ
+--------------------------------------------------------------------------------
+[UZ-TXT-23] Ziyouz.uz ва Ziyouz.com — Электрон матнли ва EPUB адабий фондлар
+  Мазмуни: Мумтоз ва замонавий ўзбек шеърияти, наср антологияси, Алишер Навоий
+  ғазаллари, халқ мақоллари ва мобил ридерлар учун 428 та EPUB китоб.
+  Формати: EPUB, HTML электрон матн
+  - Мобил кутубхона (428 та EPUB китоб): https://n.ziyouz.com/kutubxona/category/3-ziyouz-com-mobil-kutubxonasi
+  - Алишер Навоий ғазаллари матнлари: https://n.ziyouz.com/kutubxona/category/153-alisher-navoiy-g-azallari
+  - Ўзбек халқ мақоллари (электрон матн): https://ziyouz.uz/hikmatlar/ozbek-xalq-maqollari/
+  - Йил фасллари ва табиат ҳақида мақоллар: https://ziyouz.uz/hikmatlar/ozbek-xalq-maqollari/yil-fasllari-va-tabiat-hodisalari-haqida-maqollar/
+  - Масъулият ҳақида мақоллар: https://ziyouz.uz/hikmatlar/ozbek-xalq-maqollari/masuliyat-va-masuliyatsizlik-haqida-maqollar/
+  - Лотин алифбосидаги кутубхона матнлари: https://ziyouz.uz/kutubxona/ziyouz/?lng=lat
+  - Кирилл алифбосидаги кутубхона матнлари: https://ziyouz.uz/kutubxona/ziyouz/
+
+[UZ-TXT-24] Xurshid Davron kutubxonasi (Kh-davron.uz) — Адабиёт, шеърият ва тарих матнлари
+  Мазмуни: Ўзбек мумтоз ва замонавий шоир-ёзувчилари асарлари, жадид адабиёти
+  (Фитрат мансуралари ва б.), рубоийлар, достонлар ва жаҳон адабиёти таржималарининг
+  тўлиқ электрон матнлари.
+  Формати: HTML электрон матн
+  - Алишер Навоий рубоийлари, қитъалари ва туюқлари матни: https://kh-davron.uz/kutubxona/alisher-navoiy/navoiy-ruboiylar.html
+  - Кутубхона (Мумтоз ва замонавий адабиёт матнлари): https://kh-davron.uz/kutubxona/page/4
+  - Ёш ижодкорлар ва замонавий шеърият: https://kh-davron.uz/category/kutubxona/page/18
+  - Жадид адабиёти ва мансуралар: https://kh-davron.uz/cat/kutubxona/page/25
+  - Хуршид Даврон асарлари ва китоблари: https://kh-davron.uz/books-by-khurshid-davron
+
+[UZ-TXT-25] Tafakkur.net ва Adiblar GitBook — Шеърият ва рубоийлар электрон матнлари
+  Мазмуни: Ўзбек шоирларининг шеърлари, ғазаллари, рубоийлари ва ҳикматли сўзлари.
+  Формати: HTML электрон матн
+  - Tafakkur шеърлар базаси: https://tafakkur.net/sherlar
+  - Adiblar рубоийлар тўплами: https://adiblar.gitbook.io/adiblar/ruboiylar/untitled
+
+[UZ-TXT-26] Jadidlar.uz — Туркистон жадидлик ҳаракати электрон платформаси
+  Мазмуни: Жадид маърифатпарварларининг асарлари, матбуот манбалари, тадқиқотлар,
+  тил ва имло масалаларига оид электрон ва рақамли манбалар.
+  Формати: HTML электрон матн / PDF / Аудио-видео
+  - Ҳавола: https://jadidlar.uz/
+
+
+================================================================================
+II БЎЛИМ (ЎЗБЕК ТИЛИ): PDF, WORD (DOC/DOCX), DJVU, FB2 ВА БОШҚА ФОРМАТДАГИ
+БАРЧА ИЛМИЙ, БАДИИЙ, НАСРИЙ, НАЗМИЙ, ОММАБОП, РАСМИЙ АДАБИЁТЛАР, ДАРСЛИКЛАР
+ВА ЛУҒАТЛАР РЕЕСТРИ
+================================================================================
+
+--------------------------------------------------------------------------------
+2.1. ЙИРИК ЭЛЕКТРОН КУТУБХОНАЛАР (БАДИИЙ, НАСРИЙ, НАЗМИЙ, ТАРИХИЙ ВА ОММАБОП)
+--------------------------------------------------------------------------------
+[UZ-DOC-01] Ziyouz.com ва Ziyouz.uz электрон кутубхонасининг тўлиқ юклаб олиш базаси
+  Мазмуни: Минглаб ўзбекча китоблар — халқ оғзаки ижоди (116), мумтоз адабиёт (143),
+  Алишер Навоий асарлари (63), замонавий ўзбек шеърияти (780), ўзбек насри (758),
+  драматургия (106), ўзбек адабий тили (212), луғатлар (205+), тарих, фалсафа, тиббиёт
+  ва публицистика.
+  Формати: PDF, DOC/DOCX, DJVU, EPUB, APK
+  - Барча китобларни юклаб олиш ягона рўйхати: https://www.ziyouz.com/kutubxona/barcha-kitoblar
+  - Асосий категориялар каталоги: https://n.ziyouz.com/kutubxona/category/1-ziyouz-com-kutubxonasi
+  - Кутубхона бош бўлими: https://www.ziyouz.com/kutubxona
+  - Алишер Навоий асарлари тўплами (63 та китоб): https://n.ziyouz.com/kutubxona/category/40-alisher-navoiy-asarlari
+  - Ўзбек мумтоз адабиёти (143 та китоб): https://n.ziyouz.com/kutubxona/category/39-o-zbek-mumtoz-adabiyoti
+  - Ўзбек халқ оғзаки ижоди (116 та китоб): https://n.ziyouz.com/kutubxona/category/101-o-zbek-xalq-og-zaki-ijodi
+  - Халқ оғзаки ижоди юкламалар рўйхати: https://ziyouz.uz/kutubxona/ziyouz/uzbek-xalq-ogzaki-ijodi/attachment/kutubxona-uzbek-xalq-ogzaki-ijodi/?lng=lat
+  - Жаҳон халқлари оғзаки ижоди: https://n.ziyouz.com/kutubxona/barcha-kitoblar?start=9
+  - Ўзбек драматургияси (106 та китоб): https://n.ziyouz.com/kutubxona/category/8-o-zbek-dramaturgiyasi
+  - Дурдона тўпламлар (Кўп жилдли мукаммал асарлар): https://ziyouz.uz/durdona-toplamlar/
+  - Тарихга оид китоблар ва қўлланмалар: https://n.ziyouz.com/kutubxona/category/150-tarix
+  - Ўзбекистоннинг янги тарихи (3 жилдлик): https://ziyouz.uz/durdona-toplamlar/ozbekistonning-yangi-tarixi/attachment/tarix-2/?lng=lat
+  - Турли мавзулардаги илмий-оммабоп китоблар: https://n.ziyouz.com/kutubxona/barcha-kitoblar?start=22
+  - Аудиокутубхона (шеърият, эртаклар, ҳикоятлар): https://n.ziyouz.com/kutubxona/category/2-ziyouz-com-audiokutubxonasi
+
+[UZ-DOC-02] Алишер Навоий номидаги Ўзбекистон Миллий кутубхонаси (Natlib.uz тизими)
+  Мазмуни: Миллий кутубхонанинг очиқ электрон китоблар базаси, медиа ресурслари ва
+  кутубхонашунослик нашрлари.
+  Формати: PDF, Аудио/Медиа
+  - Электрон китобларнинг очиқ QR базаси: https://qr.natlib.uz/
+  - Медиа ва аудиокитоблар базаси: https://media.natlib.uz/
+  - INFOLIB ахборот-кутубхона қўлланмаси (тўғридан-тўғри PDF): https://einfolib.uz/source/nashrlar/pdf/FF-OcAD4HAEzeOsVhvJ41XbfNZjzNgEc.pdf
+  - INFOLIB илмий-амалий мақолалар таҳлили: http://einfolib.uz/post/uzbekiston-millij-kutubhonasi-maqolalar-tahlili
+
+[UZ-DOC-03] Kitobxon.com va Mutolaa.com — Электрон ва аудио китоблар порталлари
+  Мазмуни: Ўзбек адибларининг насрий ва назмий асарлари, бадиий, илмий-тарихий,
+  ҳуқуқий ва маънавий-маърифий китоблар.
+  Формати: PDF, EPUB, FB2, DJVU, Аудио
+  - Kitobxon ўзбекча китоблар каталоги: https://kitobxon.com/uz/kitoblar
+  - Kitobxon оммабоп электрон китоблар рўйхати: https://kitobxon.com/ru/kitoblar?sort=views&searchq1=kitob&pg=4
+  - Kitobxon тил ва ёзув тарихи китоблари: https://kitobxon.com/ru/kitoblar?sort=views&searchq1=kitob&pg=14
+  - Mutolaa электрон ва аудио китоблар кутубхонаси: https://mutolaa.com/uz
+
+
+--------------------------------------------------------------------------------
+2.2. МАКТАБ, КОЛЛЕЖ ВА ОЛИЙ ТАЪЛИМ ДАРСЛИКЛАРИ ҲАМДА ОТМ КУТУБХОНАЛАРИ (PDF/DOCX)
+--------------------------------------------------------------------------------
+[UZ-DOC-04] Unilibrary.uz — Олий таълим ва илмий тадқиқот муассасаларининг ягона
+            электрон кутубхона ахборот тизими
+  Мазмуни: Республикамиздаги барча олий ўқув юртларининг дарсликлари, ўқув қўлланмалари,
+  монографиялари, луғатлари ва илмий мақолалари ягона базаси.
+  Формати: PDF
+  - Адабиётлар ва дарсликлар умумий каталоги: https://unilibrary.uz/literature
+
+[UZ-DOC-05] Ziyonet.uz — Таълим ахборот тармоғи электрон кутубхонаси
+  Мазмуни: Барча таълим босқичлари учун ўқув адабиётлари, рефератлар, қўлланмалар ва
+  илмий тадқиқот ишлари (32 000+ табиий-илмий ва гуманитар манбалар).
+  Формати: PDF, DOC/DOCX
+  - Кирилл алифбосидаги кутубхона: https://library.ziyonet.uz/uzc
+  - Рус/ўзбек кутубхона каталоги: https://ziyonet.uz/ru/library
+  - Кутубхона базасини шакллантириш қўлланмаси: https://library.ziyonet.uz/ru/book/3465
+
+[UZ-DOC-06] Ziyouz.com Дарсхонаси — Мактаб, коллеж ва ОТМ дарсликлари (Тўғридан-тўғри PDF)
+  Мазмуни: Она тили, адабиёт, математика, физика, кимё, биология, география, тарих,
+  ҳуқуқ, информатика ва хорижий тиллар бўйича дарсликлар.
+  Формати: PDF, DJVU
+  - Мактаб дарсликлари бўлими: https://n.ziyouz.com/kutubxona/category/4-ziyouz-com-darsxonasi
+  - Фанлар бўйича дарсликлар кутубхонаси: https://n.ziyouz.com/library
+  - «Адабиёт» мажмуаси (1-китоб, тўғридан-тўғри PDF): https://n.ziyouz.com/books/kollej_va_otm_darsliklari/ona-tili_va_adabiyot/Adabiyot%20(majmua,%201-kitob).pdf
+  - «Адабиёт» ўқув қўлланмаси (Ў.Бобоёров, Ф.Холсаидов, тўғридан-тўғри PDF): https://ziyouz.com/books/kollej_va_otm_darsliklari/ona-tili_va_adabiyot/Adabiyot%20(O'.Boboyorov,%20F.Xolsaidov).pdf
+
+[UZ-DOC-07] Ўзбекистон университетлари ва институтларининг расмий электрон кутубхоналари
+  Мазмуни: Мутахассислик дарсликлари, ўқув-услубий мажмуалар, луғатлар ва монографиялар.
+  Формати: PDF, DOCX
+  - Тошкент давлат шарқшунослик университети (DiLib ресурслар каталоги): https://dilib.tsuos.uz/resources?page=42&sort=published_date
+  - ТДШУ таржима ва таржимашунослик нашри: https://dilib.tsuos.uz/resources/01KMD0ZADE798V6DYTRNWCGX73
+  - ТДШУ сайланма асарлар (PDF): https://dilib.tsuos.uz/resources/01FPW4707DV72KQ6N611M4WH7J
+  - Тошкент давлат юридик университети электрон кутубхонаси (TSUL): https://elib.tsul.uz/
+  - Низомий номидаги ЎзМПУ дарсликлар портали: https://npuu.uz/publishing/uchebnik
+  - Самарқанд давлат университети электрон кутубхонаси: https://e-library.samdu.uz/electron-books/bookview/08df124e-faa5-4a8a-8b2a-29dfbfe062c8
+  - Наманган давлат университети рақамли кутубхонаси: https://namdu.uz/books/
+  - Бухоро давлат университети электрон ресурслар базаси (PDF): https://uniwork.buxdu.uz/resurs/48634_1_90551D18955BB41C7D174F2FB2B811D308842BCC.pdf
+  - Тошкент давлат аграр университети кутубхонаси: https://library.tdau.uz/uz/books/3633
+  - Тошкент кимё-технология институти (AKBT): https://akbt.tkti.uz/uz/books/5753
+  - Навоий давлат кончилик ва технологиялар университети (AKBT): https://akbt.nsumt.uz/uz/books/11018
+  - Денов тадбиркорлик ва педагогика институти кутубхонаси: https://library.dtpi.uz/ru/jurnallar/4
+
+
+--------------------------------------------------------------------------------
+2.3. ЛУҒАТЛАР, ЭНЦИКЛОПЕДИЯЛАР ВА ТИЛШУНОСЛИК ҚЎЛЛАНМАЛАРИ (PDF, DJVU, DOC)
+--------------------------------------------------------------------------------
+[UZ-DOC-08] Ўзбек тилининг изоҳли, имло, синоним ва антоним луғатлари (PDF тўпламлар)
+  Мазмуни: Академик изоҳли луғатлар ва махсус лексикографик нашрлар.
+  Формати: PDF, DJVU
+  - Ўзбек тилининг 5 жилдли изоҳли луғати (Internet Archive тўлиқ архиви): https://archive.org/details/izohlilugat5jild
+  - Ўзбек тилининг изоҳли луғати 1-жилд (Tilbilig.uz тўғридан-тўғри PDF): https://tilbilig.uz/media/pdf-lugatlar/Ozbek_tilining_izohli_lugati_1-jild.pdf/
+  - Ўзбек тилининг изоҳли луғати 5 жилдлик (Ziyouz дурдона тўплами): https://ziyouz.uz/durdona-toplamlar/uzbek-tilining-izohli-lugati/
+  - Ўзбек тилининг изоҳли луғати (Unilibrary): https://unilibrary.uz/literature/880002
+  - Ўзбек тили синонимларининг изоҳли луғати (Unilibrary PDF): https://unilibrary.uz/literature/71643
+  - Ўзбек тили антонимларининг изоҳли луғати (Unilibrary PDF): https://unilibrary.uz/literature/849920
+
+[UZ-DOC-09] Икки тилли, соҳавий ва тарихий луғатлар ҳамда Миллий энциклопедия (205+ нашр)
+  Мазмуни: Инглизча-ўзбекча, русча-ўзбекча, арабча, форсча, хитойча ва соҳавий
+  терминологик луғатлар ҳамда Ўзбекистон Миллий Энциклопедияси жилдлари.
+  Формати: PDF, DJVU, DOC
+  - Ziyouz.uz 205 та луғат, энциклопедия ва маълумотномалар рўйхати: https://ziyouz.uz/kutubxona/ziyouz/lugatlar/
+  - Ziyouz.com Луғатлар категорияси (178+ луғат): https://n.ziyouz.com/kutubxona/category/102-lug-atlar
+  - Луғатлар юклаб олиш рўйхати: https://n.ziyouz.com/kutubxona/barcha-kitoblar?start=21
+  - Ўзбекча-хитойча луғат (ТДШУ DiLib тўғридан-тўғри PDF): https://dilib.tsuos.uz/en/resources/01KPRKHWMETN8KKYVQCHVWJVHM/pdf
+  - Ўзбекистон Миллий Энциклопедияси (М ҳарфи жилди, тўғридан-тўғри PDF): https://www.ziyouz.com/books/uzbekiston_milliy_ensiklopediyasi/O'zbekiston%20Milliy%20Ensiklopediyasi%20-%20M%20harfi.pdf
+  - Афғон Туркистони ўзбек матнлари ва глоссарийси (PAHAR / Internet Archive PDF/TXT): https://archive.org/details/dli.pahar.2717
+  - Фузулий «Ҳадиқат ус-суадо» туркий-ўзбекча қўлёзма нашри (Internet Archive PDF/TXT): https://archive.org/details/adatssuad00fuzuuoft
+
+
+--------------------------------------------------------------------------------
+2.4. ИЛМИЙ МАҚОЛАЛАР, ДИССЕРТАЦИЯЛАР, АВТОРЕФЕРАТЛАР ВА ЖУРНАЛЛАР (PDF)
+--------------------------------------------------------------------------------
+[UZ-DOC-10] Diss.natlib.uz — Ўзбекистон Миллий кутубхонасининг диссертациялар ва
+            авторефератлар портали
+  Мазмуни: Барча фан йўналишлари бўйича ўзбек, рус ва инглиз тилларида ҳимоя қилинган
+  докторлик (PhD, DSc) диссертациялари ва авторефератлари.
+  Формати: PDF / Онлайн ўқиш
+  - Кирилл ёзувидаги диссертациялар қидируви: https://diss.natlib.uz/uz-Cyrl-UZ/Search/Query?page=1282&RW.USTSpecialtyCodeId=2
+  - Лотин ёзувидаги диссертациялар қидируви: https://diss.natlib.uz/uz-Latn-UZ/Search/Query?page=39&RW.USTSpecialtyCodeTypeId=2
+  - Диссертация онлайн кўриш намунаси: https://diss.natlib.uz/uz-Cyrl-UZ/ResearchWork/OnlineView/33312
+
+[UZ-DOC-11] inLibrary.uz ва Илмий журналлар электрон базалари
+  Мазмуни: Ўзбекистон ва халқаро олимларнинг очиқ доступдаги илмий мақолалари,
+  ОАК рўйхатидаги журналлар ва анжуман тўпламлари.
+  Формати: PDF
+  - Барча илмий журналлар каталоги: https://inlibrary.uz/index.php/index/journals
+  - «Modern Science and Research» журнали: https://inlibrary.uz/index.php/science-research
+  - «Universal xalqaro ilmiy jurnal»: https://inlibrary.uz/index.php/universaljurnal
+  - «Yangi O'zbekiston ilmiy tadqiqotlar jurnali» архиви: https://inlibrary.uz/index.php/yoitj/issue/archive
+  - «Adabiyot xazinasi» анжуман мақолалари (PDF юклаш): https://adabiyotxazinasi.com/index.php/conf/article/download/5356/6034
+
+[UZ-DOC-12] Oyina.uz ва Академик тадқиқот нашрлари (Тўғридан-тўғри PDF)
+  Мазмуни: Жадидчилик, адабиётшунослик, ўзбек компьютер лингвистикаси ва табиий
+  фанларга оид илмий PDF нашрлар.
+  Формати: PDF
+  - «Жадид» адабий-илмий ва ижтимоий нашри (Oyina.uz PDF, 1-сон): https://oyina.uz/storage/publications/January2024/1fdkIB3DyA3VOLaeDRfI.pdf
+  - «Жадид» нашри (Oyina.uz PDF, махсус сон): https://oyina.uz/storage/publications/January2024/ySFRgpFSxuw5tOxqgZhK.pdf
+  - Ўзбек тили электрон корпусининг лексикографик имкониятлари (ResearchGate PDF): https://www.researchgate.net/publication/356815211_O'zbek_tili_elektron_korpusining_httpuzbekcorpusuz_leksikografik_imkoniyatlari_xususida
+  - Ўзбек тилининг таълимий корпуси ва унинг имкониятлари (ResearchGate PDF): https://www.researchgate.net/publication/359629629_Ozbek_tilining_ta'limiy_korpusi_va_uning_imkoniyatlari
+  - Ўзбек сўзлари ва сўз туркумлари базасини яратиш (ResearchGate PDF): https://www.researchgate.net/publication/393705981_Creating_a_database_of_uzbek_words_and_part-of-speeches_using_machine_learning_methods_and_lemmatization
+  - Universal Dependencies Treebank for Uzbek (ACL Anthology тўғридан-тўғри PDF): https://aclanthology.org/2025.resourceful-1.1.pdf
+  - UzUDT: Uzbek Universal Dependencies Treebank (LREC 2026): https://aclanthology.org/2026.lrec-1.912/
+  - Бошланғич таълим ўзбек тили луғат бойлиги датасети (PMC илмий мақоласи): https://pmc.ncbi.nlm.nih.gov/articles/PMC11848777/
+  - Ўзбек-қозоқ параллел матнлар датасети тадқиқоти (PMC): https://pmc.ncbi.nlm.nih.gov/articles/PMC10904177/
+
+
+--------------------------------------------------------------------------------
+2.5. ДИНИЙ-МАЪРИФИЙ, АХЛОҚИЙ ВА ТАРИХИЙ АДАБИЁТЛАР ҲАМДА ЭНЦИКЛОПЕДИЯЛАР (PDF)
+--------------------------------------------------------------------------------
+[UZ-DOC-13] Islom.uz ва Hilolnashr.uz маърифий кутубхонаси
+  Мазмуни: Тафсир, ҳадис, ислом тарихи, одоб-ахлоқ энциклопедиялари ва маърифий китоблар.
+  Формати: PDF, Интерактив ва Электрон китоблар
+  - Islom.uz электрон ва PDF кутубхонаси: https://islom.uz/kutubxona
+  - Таълифот ва PDF китоблар бўлими: https://islom.uz/maqola/2706
+  - Илмий-маърифий мақолалар бўлими: https://islom.uz/maqolalar?category=128
+  - Hilolnashr китоблар ва энциклопедиялар каталоги: https://hilolnashr.uz/kitoblar
+  - «Ислом одоблари энциклопедияси» (1–2-китоблар): https://hilolnashr.uz/islom-odoblari-ensiklopediyasi
+  - «Ислом мамлакатлари энциклопедияси»: https://hilolnashr.uz/islom-mamlakatlari-entsiklopediyasi
+  - «Ўзбек тилининг изоҳли луғати» (5 жилдлик тўплам): https://hilolnashr.uz/ozbek-tili-izohli-lugati
+
+
+--------------------------------------------------------------------------------
+2.6. РАСМИЙ ҲУЖЖАТЛАР, ҚОНУНЧИЛИК ВА ДАВЛАТ ПОРТАЛЛАРИ (DOC/DOCX, PDF, HTML)
+--------------------------------------------------------------------------------
+[UZ-DOC-14] Lex.uz ва Давлат расмий ҳужжатлар базалари
+  Мазмуни: Ўзбекистон Республикаси Конституцияси, барча кодекслар, қонунлар,
+  Президент фармон ва қарорлари, Вазирлар Маҳкамаси қарорлари ва идоравий норматив
+  ҳужжатлар (ҳар бир ҳужжатни Word `.doc/.docx`, `.pdf` ёки электрон матн `.html`
+  шаклида юклаб олиш мумкин).
+  Формати: Word (DOC/DOCX), PDF, HTML
+  - Lex.uz кенгайтирилган қидирув тизими: https://www.lex.uz/index.aspx
+  - Ўзбекистон Республикаси Конституцияси (Lex.uz расмий ҳужжати): https://lex.uz/docs/6451070
+  - Constitution.uz расмий моддалар базаси: https://constitution.uz/en/clause/index
+  - Gov.uz ҳукумат портали таълим ва ҳужжатлар бўлими: https://gov.uz/en/uzedu/sections/view/59909
+  - My.gov.uz очиқ статистик маълумотлар: https://my.gov.uz/uz/statistics
+
+
+
+################################################################################
+2-ҚИСМ. ҚОЛГАН 22 ТА ТИЛ БЎЙИЧА ИЛМИЙ, БАДИИЙ, НАСРИЙ, НАЗМИЙ, РАСМИЙ
+        АДАБИЁТЛАР, ДАРСЛИКЛАР, ЛУҒАТЛАР ВА МАТН КОРПУСЛАРИ РЕЕСТРИ
+################################################################################
+
+--------------------------------------------------------------------------------
+2. РУС ТИЛИ (Электрон матн корпуслари, луғатлар, бадиий ва илмий PDF базалар)
+--------------------------------------------------------------------------------
+- Максим Мошков кутубхонаси (TXT/HTML наср, назм, илм-фан): http://www.kulichki.com/moshkow/
+- Алексей Комаров интернет-кутубхонаси (iLibrary тоза матнлар): https://ilibrary.ru/text/69/p.1/index.html
+- Рус тили миллий корпуси (НКРЯ Studiorum ва глоссарий): https://studiorum.ruscorpora.ru/glossary/
+- НКРЯ академик луғатлар базаси: http://dict.ruslang.ru/
+- Грамота.ру фундаментал луғатлар реестри: https://gramota.ru/biblioteka/slovari
+- Грамота.ру маълумотнома кутубхонаси: https://gramota.ru/biblioteka
+- КиберЛенинка (CyberLeninka очиқ илмий мақолалар PDF ва OCR матн базаси): https://cyberleninka.ru/search
+- НКРЯ бўйича илмий PDF нашр: https://www.gramota.net/article/alm20101438/pdf
+
+--------------------------------------------------------------------------------
+3. ИНГЛИЗ ТИЛИ (Электрон матнлар, EPUB/TXT китоблар ва PDF дарсликлар)
+--------------------------------------------------------------------------------
+- Standard Ebooks (EPUB/XHTML эркин китоблар): https://standardebooks.org/ebooks
+- Project Gutenberg умумий китоблар каталоги (75 000+ TXT/HTML/EPUB): https://www.gutenberg.org/ebooks/
+- Project Gutenberg муаллифлар индекси: https://www.gutenberg.org/browse/authors/a
+- Project Gutenberg тилшунослик асари (The Treasury of Languages, HTML/TXT): https://www.gutenberg.org/files/70957/70957-h/70957-h.htm
+- OpenStax (Олий ва ўрта таълим учун бепул академик PDF дарсликлар): https://openstax.org/subjects
+- OpenStax Математика дарсликлари (PDF): https://openstax.org/subjects/math
+- OpenStax Табиий ва аниқ фанлар дарсликлари (PDF): https://openstax.org/subjects/science
+- OpenStax Бизнес ва иқтисодиёт дарсликлари (PDF): https://openstax.org/subjects/business
+- OpenStax Кимё дарслиги (Chemistry 2e, PDF): https://openstax.org/details/books/chemistry-2e
+
+--------------------------------------------------------------------------------
+4. ФРАНЦУЗ ТИЛИ (Электрон матн кутубхоналари ва PDF манбалар)
+--------------------------------------------------------------------------------
+- Wikisource Francophone (529 000+ очиқ французча матнлар, EPUB/PDF/HTML): https://fr.wikisource.org/wiki/Wikisource:Accueil
+- ABU CNAM (Французча классик асарларнинг тўлиқ TXT/HTML архиви): http://abu.cnam.fr/
+- Gallica — Франция Миллий кутубхонаси рақамли портали (OCR матн ва PDF): https://gallica.bnf.fr/accueil/fr/html/accueil-fr
+- Gallica / BnF тилшуносликка оид французча PDF китоб: http://twanclik.free.fr/max-mueller2.pdf
+
+--------------------------------------------------------------------------------
+5. НЕМИС ТИЛИ (Электрон матн корпуслари, луғатлар ва PDF нашрлар)
+--------------------------------------------------------------------------------
+- Project Gutenberg немис тилидаги китоблар бўлими (TXT/EPUB/HTML): https://www.gutenberg.org/browse/languages/de
+- DWDS (Немис тили рақамли луғати ва миллий матн корпуси): https://www.bbaw.de/forschung/digitales-woerterbuch-der-deutschen-sprache
+- DWDS XX аср асосий матн корпуси (Text+ реестри): https://registry.text-plus.org/doc/collection/f598969c-8cf3-4d22-9d35-76ab2b09626d
+- Trierer Wörterbuchnetz (Немис тили тарихий ва академик луғатлар тармоғи): https://woerterbuchnetz.de/
+- Max Planck Institute DWDS илмий PDF нашри: https://www.mpi.nl/publications/item1076569/das-digitale-worterbuch-der-deutschen-sprache-dwds
+- ResearchGate DWDS лексикография PDF нашри: https://www.researchgate.net/publication/342045993_Das_Digitale_Worterbuch_der_Deutschen_Sprache_DWDS
+
+--------------------------------------------------------------------------------
+6. ЯПОН ТИЛИ (Электрон матн кутубхонаси, луғатлар ва PDF қўлланмалар)
+--------------------------------------------------------------------------------
+- Aozora Bunko (青空文庫 — Япон адабиёти ва илмий асарларини TXT/XHTML шаклида юклаш): https://www.aozora.gr.jp/guide/download.html
+- Aozora Bunko расмий қўлланмаси: https://www.aozora.gr.jp/guide/aozora_bunko_hayawakari.html
+- Jisho.org (Япон-инглиз кенг қамровли электрон луғати): https://jisho.org/search/%E6%9B%B8%E5%BA%AB
+- Aozora Bunko расмий PDF тўплами (Word ва матн билан ишлаш): https://www.aozora.gr.jp/kizokeikaku/aozorabunko_zen_02.pdf
+- Университет кутубхонаси Aozora PDF шарҳи: https://www.shoken-gakuen.ac.jp/library/event/tsushin/pdf/tsushin04.pdf
+- Япон Миллий Парламент кутубхонаси (NDL) индекси: https://id.ndl.go.jp/auth/ndlna/00810843
+
+--------------------------------------------------------------------------------
+7. ХИТОЙ ТИЛИ (Электрон матн корпуслари, луғатлар ва давлат дарсликлари)
+--------------------------------------------------------------------------------
+- Chinese Text Project (中國哲學書電子化計劃 — Хитой мумтоз ва тарихий матнлар базаси): https://ctext.org/zh
+- Chinese Text Project кутубхона каталоги: https://ctext.org/library.pl?if=gb
+- «Хань шу» тарихий асари тўлиқ электрон матни: https://ctext.org/han-shu/zh
+- Сун ва Мин даври асарлари электрон матни: https://ctext.org/song-ming/zh
+- Zdic.net (汉典 — Хитой тилининг изоҳли ва этимологик луғати): https://www.zdic.net/
+- SmartEdu (Хитой давлат бошланғич ва ўрта мактаб электрон дарсликлар портали): https://basic.smartedu.cn/elecEdu
+- SmartEdu синфлар бўйича ўқув китоблари: https://basic.smartedu.cn/syncClassroom
+
+--------------------------------------------------------------------------------
+8. ИСПАН ТИЛИ (Электрон матн кутубхонаси, академик ва ҳуқуқий луғатлар)
+--------------------------------------------------------------------------------
+- Мигель де Сервантес виртуал кутубхонаси («Дон Кихот» тўлиқ HTML матни): https://www.cervantesvirtual.com/obra-visor/el-ingenioso-hidalgo-don-quijote-de-la-mancha-6/html/
+- Сервантес кутубхонаси («El Monte de las Ánimas» HTML матни): https://www.cervantesvirtual.com/obra-visor/el-monte-de-las-animas/html/c9646750-a0fa-11e1-b1fb-00163ebf5e63_2.html
+- Испания Қироллик академияси (RAE) рақамли кутубхонаси: https://www.rae.es/biblioteca-digital
+- Испан тили академик изоҳли луғати (DLE): https://dle.rae.es/diccionario
+- Паиспан грамматик луғати (DPD): https://www.rae.es/dpd/
+- RAE DLE Tricentenario расмий PDF нашри: https://dle.rae.es/docs/DLE-Edici%C3%B3n-del-Tricentenario.pdf
+- Юридик ва расмий испан тили луғати (DPEJ): https://dpej.rae.es/
+
+--------------------------------------------------------------------------------
+9. ТОЖИК ТИЛИ (Электрон матн корпуслари, луғатлар ва PDF дарсликлар)
+--------------------------------------------------------------------------------
+- Tajik Web Corpus (Тожик тили веб-матнлар корпуси, Parquet/TXT): https://huggingface.co/datasets/TajikNLPWorld/tajik-web-corpus
+- Leipzig асосидаги тожик тили матн корпуси: https://huggingface.co/datasets/muhtasham/tajik-corpus
+- Тожик-форс параллел матн корпуси: https://huggingface.co/datasets/TajikNLPWorld/TajPersParallelCorpus
+- Тожик-форс параллел лексик (луғат) корпуси: https://huggingface.co/datasets/TajikNLPWorld/TajPersParallelLexicalCorpus
+- Вожаҷӯ (Vazhaju.tj — Тожик тилининг онлайн изоҳли луғати): https://vazhaju.tj/
+- Тожикистон Маориф ва илм вазирлиги электрон кутубхонаси (Мактаб дарсликлари ва бадиий китоблар, PDF): https://maorif.tj/libraries?category=25
+- Тожикистон Маориф вазирлиги хорижий тиллар ва фан дарсликлари (PDF): https://maorif.tj/libraries?category=28
+- 5-синф расмий мактаб дарслиги (тўғридан-тўғри PDF): https://maorif.tj/storage/libraries/01J3F17QT1AVDYZ46D4SQQZH4E.pdf
+- Равшанфикр (Ravshanfikr.tj) дарсликлар ва илмий журналлар бўлими: https://ravshanfikr.tj/kitob-oi-darsi.html?type=rss
+- Забони тоҷикӣ (8-синф дарслиги, тўғридан-тўғри PDF): https://kitobkhona.narod.ru/8/Zaboni_Tojiki_8.pdf
+- Тожик тилшунослиги илмий иши (ТМУ, тўғридан-тўғри PDF): https://tnu.tj/avtorefi/avtorefRrhimhgovaA.pdf
+
+--------------------------------------------------------------------------------
+10. ФОРС ТИЛИ (Электрон шеърият ва наср корпуси, луғатлар ва PDF дарсликлар)
+--------------------------------------------------------------------------------
+- Ганжур (Ganjoor.net — Форс мумтоз ва замонавий шеърияти ҳамда насри тоза матни, Фирдавсий «Шоҳнома»си): https://ganjoor.net/ferdousi/shahname/aghaz/sh1
+- Абадис — «Луғатномаи Деҳхудо» академик форс луғати: https://abadis.ir/dehkhoda/
+- Абадис — Форсча-форсча изоҳли луғат: https://abadis.ir/fatofa/
+- Форс тили 7-синф расмий мактаб дарслиги (тўғридан-тўғри PDF): https://iranarze.ir/storage/uploads/2023/06/%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-%D9%BE%D8%A7%DB%8C%D9%87-%D9%87%D9%81%D8%AA%D9%85.pdf
+- Форс тили 1 (10-синф расмий дарслиги, тўғридан-тўғри PDF): https://iranarze.ir/blog/wp-content/uploads/2025/03/farsi-10.pdf
+- Форс тили 2 (11-синф расмий дарслиги, тўғридан-тўғри PDF): https://iranarze.ir/blog/wp-content/uploads/2025/03/farsi-11.pdf
+- Форс шеърияти ва насри луғати ўқув қўлланмаси: https://konkur.in/110978/%D8%AC%D8%B2%D9%88%D9%87-%D9%85%D8%B9%D9%86%DB%8C-%D8%B4%D8%B9%D8%B1-%D9%88-%D9%86%D8%AB%D8%B1-%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-2-%D9%BE%D8%A7%DB%8C%D9%87-%DB%8C%D8%A7%D8%B2%D8%AF%D9%87%D9%85.html
+
+--------------------------------------------------------------------------------
+11. ТУРК ТИЛИ (Электрон луғатлар, электрон китоблар ва илмий PDF мақолалар)
+--------------------------------------------------------------------------------
+- Турк Тил Жамияти (TDK) электрон китоблар портали: https://tdk.gov.tr/yayinlar/e-kitap/e-kitap-tdk/
+- TDK Güncel Türkçe Sözlük (Онлайн изоҳли луғат): https://sozluk.gov.tr/
+- VIII Халқаро турк тили қурултойи илмий мақолалар тўплами (TDK, тўғридан-тўғри PDF): https://tdk.gov.tr/wp-content/uploads/2019/12/8.-uluslaraaras%C4%B1-T%C3%BCrk-Dili-Bildirileri-cilt-2.pdf
+- DergiPark (TÜBİTAK ULAKBİM — 3 000+ илмий журнал ва 800 000+ PDF мақола): https://dergipark.org.tr/tr/
+- Турк кутубхоначилиги ва электрон китоблар журнали (PDF): https://dergipark.org.tr/tr/pub/tk
+- Турк луғатшунослиги тарихи бўйича PDF тадқиқот: https://dergipark.org.tr/tr/pub/kafdagi/article/755708
+
+--------------------------------------------------------------------------------
+12. ҚОЗОҚ ТИЛИ (Миллий матн корпуслари, луғатлар ва электрон кутубхоналар)
+--------------------------------------------------------------------------------
+- SozKZ Corpus Clean v3 (Тозаланган қозоқ тили матн корпуси, Parquet/TXT): https://huggingface.co/datasets/stukenov/sozkz-corpus-clean-v3
+- Multidomain Kazakh Dataset (Кўп соҳали қозоқча матнлар базаси): https://huggingface.co/datasets/kz-transformers/multidomain-kazakh-dataset
+- SozKZ Corpora тўплами: https://huggingface.co/collections/stukenov/sozkz-corpora-kazakh-training-datasets
+- Рус-қозоқ параллел хабарлар корпуси: https://huggingface.co/datasets/kurumikz/telegram-corpus-russian-kazakh
+- Қазақ тілінің ұлттық корпусы: https://qazcorpus.kz/
+- «Тіл-Қазына» қозоқ тили кичик корпуслари: https://qazcorpora.kz/
+- Sozdikqor.kz (Қозоқ тили академик ва терминологик луғатлар базаси): https://sozdikqor.kz/all_word
+- Adebiportal.kz (Қозоқ адабиёти — наср, шеърият ва драматургия электрон кутубхонаси): https://adebiportal.kz/kz
+- KazNEB (Қозоғистон Миллий Электрон Кутубхонаси — луғатлар ва китоблар PDF каталоги): https://kazneb.kz/kk/catalogue/result?flt=voc
+- KazNEB қиёсий туркий луғатлар бўлими: https://kazneb.kz/la/catalogue/result?flt=voc&page=12
+
+--------------------------------------------------------------------------------
+13. ТУРКМАН ТИЛИ (Матн корпуси, PDF дарсликлар, грамматика ва изоҳли луғат)
+--------------------------------------------------------------------------------
+- TurkmenSpeech (Туркманча транскрипцияланган матн ва нутқ корпуси): https://huggingface.co/datasets/mamed0v/TurkmenSpeech
+- Kitaphana.net (Туркман электрон кутубхонаси бўлимлар рўйхати): https://www.kitaphana.net/authors
+- Туркман тили бўйича 40 та китоб ва дарсликлар каталоги: https://www.kitaphana.net/author/13/books
+- Туркман тилининг изоҳли луғати II жилд (K-Z, 566 бет, PDF): https://www.kitaphana.net/book/1400
+- Туркман тили ўқув китоби (Олий таълим учун, PDF): https://www.kitaphana.net/book/1475/read
+- Туркман тили грамматикаси қўлланмаси (PDF): https://www.kitaphana.net/book/2319/read
+- Туркман тили ўқув қўлланмаси (PDF): https://www.kitaphana.net/book/2159/read
+
+--------------------------------------------------------------------------------
+14. УЙҒУР ТИЛИ (Очиқ матн корпуслари, луғат базалари ва PDF китоблар)
+--------------------------------------------------------------------------------
+- Uyghur-Corpus / uyghur-text (Уйғур тилидаги очиқ матнлар корпуси, TXT/Parquet): https://huggingface.co/datasets/Uyghur-Corpus/uyghur-text
+- Uyghur-Corpus / uyghur-sentences (Уйғур тили жумлалар корпуси): https://huggingface.co/datasets/Uyghur-Corpus/uyghur-sentences
+- PKUPIE MC2 уйғур ва қозоқ матн корпуси: https://huggingface.co/datasets/pkupie/mc2_corpus
+- Тарихий уйғур-хитой расмий матнлар корпуси (Zenodo): https://zenodo.org/records/6513855
+- GitHub Uyghur-ChineseDictionary (Уйғурча луғат сўзлар базаси ва кодлари): https://github.com/gheyret/Uyghur-ChineseDictionary
+- GitHub Okyanus уйғур луғатлари манбаси: https://github.com/uyghur-language/uyghur-language.github.io
+- Қадимги уйғур тили академик луғати (Handwörterbuch des Altuigurischen, очиқ PDF/TXT): https://archive.org/details/oapen-20.500.12657-51341
+- Гёттинген университети нашриёти уйғур луғати саҳифаси: https://univerlag.uni-goettingen.de/handle/3/isbn-978-3-86395-481-9?locale-attribute=en
+- Uyghurche.net уйғур тили луғатлари PDF манбалари: https://www.uyghurche.net/resources/dictionaries/
+- Uyghur Reader (Уйғур тили ўқиш китоби, PDF/TXT): https://www.scribd.com/document/299404332/Uyghur-Reader
+- Замонавий уйғур тили фонетикаси тадқиқоти (тўғридан-тўғри PDF): https://www.atlantis-press.com/article/125911996.pdf
+
+--------------------------------------------------------------------------------
+15. ОЗАРБАЙЖОН ТИЛИ (Электрон кутубхоналар ва PDF академик луғатлар)
+--------------------------------------------------------------------------------
+- Озарбайжон ёшлар кутубхонаси электрон китоблар каталоги: https://ryl.az/electronic-services/all-books?page=35
+- Озарбайжон тилининг 4 жилдли изоҳли луғати (I жилд, тўғридан-тўғри PDF): https://azerbaycandili.az/Vocabularies/Download/1/Az%C9%99rbaycan%20dilinin%20izahli%20l%C3%BCgeti%20I%20cild.pdf
+- Озарбайжон тилининг диалектологик луғати (Миллий кутубхона, PDF): http://web2.anl.az:81/read/page.php?bibid=vtls000044003
+- Форсча-озарбайжонча луғат (Миллий кутубхона, PDF): http://web2.anl.az:81/read/page.php?bibid=82150&pno=1&lang=ru
+- Озарбайжонча-лазгинча луғат ва дарсликлар (тўғридан-тўғри PDF): https://www.kitabxana.net/files/books/file/1755069396.pdf
+
+--------------------------------------------------------------------------------
+16. ҚОРАҚАЛПОҚ ТИЛИ (Очиқ матн/достон корпуслари, PDF дарслик ва илмий асарлар)
+--------------------------------------------------------------------------------
+- Karakalpak Dastan Corpus (Қорақалпоқ достонлари очиқ NLP матн корпуси, Parquet/TXT): https://huggingface.co/datasets/nietbaeviysa/karakalpak-dastan-corpus
+- Karakalpak Speech & Normalized Text Corpus (Лотин ёзувидаги меъёрлаштирилган матнлар): https://huggingface.co/datasets/atikuwu/karakalpak-speech-corpus
+- Қорақалпоқ фольклори ўқув қўлланмаси (ҚҚДУ, PDF): https://www.researchgate.net/publication/356283389_Qaraqalpaq_folklori
+- Қорақалпоқ лексикографиясининг ривожланиш босқичлари (PDF): https://www.researchgate.net/publication/387694792_QARAQALPAQ_LEKSIKOGRAFIYASININ_RAWAJLANIW_BASQISHLARI
+- Қорақалпоқ тили лингвистикаси (inLibrary PDF): https://inlibrary.uz/index.php/science-research/article/view/138058/139232
+- Қорақалпоқ тилидаги омонимлар тадқиқоти (PDF): https://www.researchgate.net/publication/354076390_Qaraqalpaq_tilindegi_omonimlerdin_izertleniw_maselesi_ham_aktualligi
+- Қорақалпоқ тили чорвачилик лексикасида диалектал бирликлар (тўғридан-тўғри PDF): https://adabiyotxazinasi.com/index.php/conf/article/download/5356/6034
+- Қорақалпоқ тили 7-синф дарслиги (PDF): https://www.scribd.com/document/754914007/Qaraqalpaq-Tili-7-Klass
+
+--------------------------------------------------------------------------------
+17. ҚИРҒИЗ ТИЛИ (Электрон кутубхона, луғатлар ва расмий PDF мактаб дарсликлари)
+--------------------------------------------------------------------------------
+- Bizdin.kg (Қирғиз тилидаги китоблар, Юдахин луғати ва қўлёзмалар фонди): https://new.bizdin.kg/
+- Kitep.edu.kg (Қирғизистон Таълим вазирлигининг 245+ расмий мактаб дарсликлари базаси): https://kitep.edu.kg/catalog/27
+- Қирғиз тили дарсликлари каталоги: https://kitep.edu.kg/catalog/32
+- Қирғиз тили ва ўқиш (2-синф дарслиги, PDF): https://kitep.edu.kg/book/515/read
+- Қирғиз тили дарслиги (С. Усўналиев, В. Мусаева): https://kitep.edu.kg/book/89/read
+- Қирғиз тили дарслиги (Н. Абилаева ва бошқ.): https://kitep.edu.kg/book/215/read
+
+--------------------------------------------------------------------------------
+18. ПУШТУ (ПУШТИН) ТИЛИ (1,5 млрд сўзлик матн корпуси, луғатлар ва PDF китоблар)
+--------------------------------------------------------------------------------
+- Tensor-Labs / Pashto-Largest-Corpus (1,5 миллиард сўзлик тозаланган пушту матн корпуси): https://huggingface.co/datasets/Tensor-Labs/pashto-largest-corpus
+- Hugging Face пушту дарсликлари ва матн корпуслари рўйхати: https://huggingface.co/datasets?other=pashto
+- Qamosona.com (Пушту тили онлайн кўп тилли луғатлар портали): https://www.qamosona.com/
+- Ketabona (Пушту тили грамматикаси ва китоблари каталоги, PDF): https://ketabona.com/books/%D9%BE%DA%9A%D8%AA%D9%88-%DA%A9%D8%AA%D8%A7%D8%A8%DA%9A%D9%88%D8%AF/
+- Ketabton пушту луғати: https://ketabton.com/books/pnNuvV4WovR
+- Ketabton 12 бўлимли ўқув китоби (тўғридан-тўғри PDF): https://ketabton.com/books/AnymNBSvd2Z/file.pdf
+- Пушту-дари луғати (PDF): https://www.scribd.com/document/709701885/Pashto-Dari-Dictionary
+- 14 та пушту луғатининг таснифий рўйхати (PDF/TXT): https://www.scribd.com/doc/34315756/Pashto-Dictionaries
+
+--------------------------------------------------------------------------------
+19. АФҒОН (ДАРИ) ТИЛИ (Рақамли архивлар, тарихий-ҳуқуқий PDF китоблар ва луғатлар)
+--------------------------------------------------------------------------------
+- ACKU (Кобул университети қошидаги Афғонистон марказининг 190 000+ ҳужжатли рақамли архиви): https://acku.edu.af/library/
+- ACKU бадиий ва болалар китоблари бўлими (PDF): https://acku.edu.af/books/
+- Afghanistan Digital Library (NYU — 1870–1930 йиллардаги дарича ҳуқуқий ва тарихий PDF китоблар): http://afghanistandl.nyu.edu/search/?start=0&sort=title.sort&q=law
+- Afghanistan Digital Library тавсифи: https://afghanistandl.nyu.edu/about.html
+- Инглиз-афғон дари тили луғати ва қўлланмаси (Ketabton): https://ketabton.com/books/EWEZHSAATNf
+
+--------------------------------------------------------------------------------
+20. ҲИНД ТИЛИ (Электрон луғатлар, шеърий тўпламлар ва NCERT расмий PDF дарсликлари)
+--------------------------------------------------------------------------------
+- Shabdkosh.com (Ҳинд ва инглиз тили онлайн луғати): https://www.shabdkosh.com/dictionary/english-hindi/poetry%20book/poetry%20book-meaning-in-hindi
+- NCERT (1–12-синфлар учун барча фанлардан ҳинд тилидаги расмий PDF дарсликлар портали): https://ncert.nic.in/textbook.php
+- NCERT 12-синф ҳинд тили ва адабиёти дарслиги (PDF): https://ncert.nic.in/textbook.php?jhks1=ps-12
+- NCERT ҳинд тили дарслиги (fhml1 PDF тўплами): https://ncert.nic.in/textbook.php?fhml1=0-13
+- Bhargav Adarsh Hindi Shabdkosh (Академик ҳинд луғати, Internet Archive PDF/TXT): https://archive.org/details/in.ernet.dli.2015.403124
+- Collection of Hindi Poems (Ҳинд шеърлари тўплами, PDF): https://www.scribd.com/doc/114764450/Collection-of-Hindi-Poems
+- Hindi Kavita Sangrah (Ҳинд шеърияти антологияси, PDF): https://www.scribd.com/doc/86320138/Hindi-Kavita-Sangrah
+
+--------------------------------------------------------------------------------
+21. КОРЕЙС ТИЛИ (Миллий тил институти матн корпуслари, луғатлар ва электрон китоблар)
+--------------------------------------------------------------------------------
+- Корея Миллий тил институти «Modu Corpus» (모두의 말뭉치 — давлат матн корпусларини юклаш): https://kli.korean.go.kr/corpus/main/requestMain.do
+- Корейс тили NLP бенчмарк ва илмий матнлар рўйхати: https://kli.korean.go.kr/benchmark/taskNews/paperList.do?lang=ko
+- Корея Миллий тил институти электрон китоблар ва луғатлар рўйхати: https://www.korean.go.kr/front/eBook/eBookList.do
+- Корея Миллий марказий кутубхонаси электрон китоблар фонди: https://books.nl.go.kr/NL/contents/N50801080000.do
+
+--------------------------------------------------------------------------------
+22. АРАБ ТИЛИ (Очиқ электрон матн кутубхоналари, EPUB ва PDF китоблар)
+--------------------------------------------------------------------------------
+- Hindawi Foundation / Safahat (3 300+ бепул арабча китоблар — HTML матн, EPUB, KFX, PDF): https://www.safahat.org/books/
+- Safahat романлар ва насрий асарлар бўлими: https://www.safahat.org/books/categories/novels/
+- Safahat адабиёт ва шеърият бўлими: https://www.safahat.org/books/categories/literature/
+- Hindawi расмий арабча портали: https://www.hindawi.org/ar
+- Al-Maktaba Al-Shamela (Шамела китоблар базаси ва BOK-дан PDF/EPUB/MOBI конвертери): https://shamela.org/books/
+- Китаб Жами ал-Алфаз (Тарихий араб-иброний луғати, Internet Archive): https://archive.org/details/hebrewarabicdict0011alfa
+
+--------------------------------------------------------------------------------
+23. ИСРОИЛ / ИБРОНИЙ ТИЛИ (Очиқ матн корпуслари ва 40 000+ PDF китоблар)
+--------------------------------------------------------------------------------
+- Sefaria (Иброний тилидаги очиқ матнлар кутубхонаси — HTML, JSON, CSV, TXT): https://www.sefaria.org/texts
+- Sefaria Танах матнлари: https://www.sefaria.org/texts/Tanakh
+- Sefaria Мишна матнлари: https://www.sefaria.org/texts/Mishnah
+- Sefaria рақамлаштирилган очиқ матнлар: https://www.sefaria.org/digitized-by-sefaria
+- Project Ben-Yehuda (Иброний мумтоз ва замонавий адабиёти — наср, шеърият, луғатлар): https://benyehuda.org/
+- HebrewBooks.org (40 000+ бепул ибронийча PDF ва матнли китоблар архиви): https://www.hebrewbooks.org/shas
+- HebrewBooks намунавий тўлиқ PDF китоб: https://hebrewbooks.org/6721
+
+================================================================================
+РЕЕСТР ЯКУНИ
+================================================================================

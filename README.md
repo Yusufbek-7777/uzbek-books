@@ -36,3 +36,18 @@ HF_TOKEN=hf_... python3 scripts/fetch_sources.py fetch --include-gated --include
 ## Каталогга манба қўшиш
 
 `sources/uzbek_sources.yaml` га янги ёзув қўшинг: `id` (`UZ-ADD-NN`), `name`, `group`, `format`, `access`, `origin`, `urls`, ва юклаб олиш мумкин бўлса `fetch`.
+
+## Модель ўргатиш учун матн тайёрлаш
+
+```bash
+# Тозалаш, лотинга ўгириш, апострофни бир хил қилиш, такрорларни олиб ташлаш -> JSONL
+python3 scripts/normalize.py data/UZ-TXT-05 data/UZ-TXT-03 -o corpus/uz.jsonl
+python3 scripts/normalize.py kitob.txt --script keep --apostrophe official -o corpus/kitob.jsonl
+
+# Токенизаторларни ўзбекча намунада солиштириш (бир сўзга неча токен)
+pip install transformers sentencepiece
+python3 scripts/tokenizer_fertility.py corpus/uz.jsonl \
+    google/gemma-3-4b-it Qwen/Qwen3-4B meta-llama/Llama-3.2-3B --train-sp 32000
+```
+
+`--apostrophe ascii` (асосий) oʻ, gʻ ва тутуқ белгисининг ҳамма вариантини `'` га келтиради. `official` эса расмий `ʻ` ва `ʼ` белгиларини қўяди.

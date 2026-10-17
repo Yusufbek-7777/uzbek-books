@@ -1,0 +1,5 @@
+pyyaml
+huggingface_hub
+sentencepiece
+# tokenizer_fertility.py учун: transformers
+# parquet ўқиш учун: pyarrow
